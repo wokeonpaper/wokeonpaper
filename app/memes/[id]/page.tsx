@@ -46,7 +46,7 @@ export default async function MemePage({ params }: Props) {
       <header className="site-header">
         <Link href="/" className="brand">
           <Image
-            src="/wop/logo.png"
+            src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
             width={105}
             height={48}
@@ -136,7 +136,7 @@ export default async function MemePage({ params }: Props) {
       <footer className="site-footer">
         <div>
           <Image
-            src="/wop/logo.png"
+            src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
             width={105}
             height={105}

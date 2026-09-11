@@ -7,7 +7,7 @@ export default function Home() {
       <header className="site-header">
         <Link href="/" className="brand">
           <Image
-            src="/wop/logo.png"
+            src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
             width={105}
             height={48}
@@ -45,7 +45,7 @@ export default function Home() {
         <div className="hero-image">
           <div className="hero-paper">
             <Image
-              src="/wop/meme-50.webp"
+              src="/wokeonpaper/wop/meme-50.webp"
               alt="WokeOnPaper meme"
               width={900}
               height={900}
@@ -82,7 +82,7 @@ export default function Home() {
           <Link href="/memes/3" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wop/meme-3.webp"
+                src="/wokeonpaper/wop/meme-3.webp"
                 alt="The theory of change versus the change that actually happens"
                 width={800}
                 height={800}
@@ -101,7 +101,7 @@ export default function Home() {
           <Link href="/memes/24" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wop/meme-24.webp"
+                src="/wokeonpaper/wop/meme-24.webp"
                 alt="The NGO hospital"
                 width={800}
                 height={800}
@@ -121,7 +121,7 @@ export default function Home() {
           <Link href="/memes/38" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wop/meme-38.webp"
+                src="/wokeonpaper/wop/meme-38.webp"
                 alt="Collaboration in the nonprofit sector"
                 width={800}
                 height={800}
@@ -158,21 +158,21 @@ export default function Home() {
 
         <div className="majdoor-images">
           <Image
-            src="/wop/meme-5.webp"
+            src="/wokeonpaper/wop/meme-5.webp"
             alt="WokeOnPaper meme"
             width={500}
             height={500}
           />
 
           <Image
-            src="/wop/meme-20.webp"
+            src="/wokeonpaper/wop/meme-20.webp"
             alt="WokeOnPaper meme"
             width={500}
             height={500}
           />
 
           <Image
-            src="/wop/meme-30.webp"
+            src="/wokeonpaper/wop/meme-30.webp"
             alt="A Bad NGO Worker"
             width={500}
             height={500}
@@ -193,7 +193,7 @@ export default function Home() {
       <footer className="site-footer">
         <div>
           <Image
-            src="/wop/logo.png"
+            src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
             width={105}
             height={105}

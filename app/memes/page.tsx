@@ -14,7 +14,7 @@ export default function MemesPage() {
       <header className="site-header">
         <Link href="/" className="brand">
           <Image
-            src="/wop/logo.png"
+            src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
             width={105}
             height={48}
@@ -80,7 +80,7 @@ export default function MemesPage() {
       <footer className="site-footer">
         <div>
           <Image
-            src="/wop/logo.png"
+            src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
             width={105}
             height={105}
