@@ -792,4 +792,140 @@ img {
     width: 105px;
     height: 105px;
   }
+}/* =========================
+   MEMES ARCHIVE
+   ========================= */
+
+.memes-intro {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 32px 60px;
+}
+
+.memes-intro h1 {
+  max-width: 850px;
+  margin: 14px 0 20px;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: #3f1c4e;
+}
+
+.memes-intro-text {
+  max-width: 650px;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #555;
+}
+
+.meme-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.meme-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: #f7e0ff;
+  border: 1px solid rgba(63, 28, 78, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0 #3f1c4e;
+}
+
+.meme-card-image {
+  background: white;
+  padding: 14px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.meme-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.meme-card-content {
+  padding: 22px;
+}
+
+.meme-card-number {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3f1c4e;
+}
+
+.meme-card-category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #795893;
+}
+
+.meme-card h2 {
+  margin: 12px 0 10px;
+  font-size: 25px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #3f1c4e;
+}
+
+.meme-card p {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4d4d4d;
+}
+
+.read-meme {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3f1c4e;
+}
+
+@media (max-width: 800px) {
+  .memes-intro {
+    padding: 60px 20px 40px;
+  }
+
+  .meme-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px 70px;
+    gap: 18px;
+  }
+
+  .meme-card-content {
+    padding: 17px;
+  }
+
+  .meme-card h2 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 560px) {
+  .meme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .memes-intro h1 {
+    font-size: 52px;
+  }
+
+  .memes-intro-text {
+    font-size: 17px;
+  }
 }
