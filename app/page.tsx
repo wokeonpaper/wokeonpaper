@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import HeroCarousel from "@/app/components/HeroCarousel"
 
 export default function Home() {
   return (
@@ -9,8 +10,9 @@ export default function Home() {
           <Image
             src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
-            width={105}
-            height={48}
+            width={46}
+            height={46}
+            className="brand-logo"
             priority
           />
         </Link>
@@ -18,6 +20,7 @@ export default function Home() {
         <nav className="main-nav">
           <Link href="/">Home</Link>
           <Link href="/memes">Memes</Link>
+          <Link href="/stories">Stories</Link>
           <Link href="/about">About</Link>
         </nav>
       </header>
@@ -44,13 +47,7 @@ export default function Home() {
 
         <div className="hero-image">
           <div className="hero-paper">
-            <Image
-              src="/wokeonpaper/wop/meme-50.webp"
-              alt="WokeOnPaper meme"
-              width={900}
-              height={900}
-              priority
-            />
+            <HeroCarousel />
           </div>
         </div>
       </section>
@@ -68,6 +65,29 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="sector-stats">
+        <p className="eyebrow">THE NONPROFIT LANDSCAPE IN INDIA</p>
+        <h2>Who counts as a nonprofit, and how many are there?</h2>
+        <div className="stats-grid">
+          <div className="stat-card">
+            <span className="stat-number">3,04,666</span>
+            <span className="stat-label">Trusts</span>
+            <span className="stat-percent">49.84%</span>
+          </div>
+          <div className="stat-card">
+            <span className="stat-number">2,50,726</span>
+            <span className="stat-label">Societies</span>
+            <span className="stat-percent">41.02%</span>
+          </div>
+          <div className="stat-card">
+            <span className="stat-number">55,861</span>
+            <span className="stat-label">Section 8 Companies</span>
+            <span className="stat-percent">9.14%</span>
+          </div>
+        </div>
+        <p className="stats-source">Source: NGO Darpan, India&apos;s NGO registration portal.</p>
+      </section>
+
       <section className="featured-section">
         <div className="section-heading">
           <div>
@@ -75,14 +95,14 @@ export default function Home() {
             <h2>Things we can't stop thinking about.</h2>
           </div>
 
-          <Link href="/memes">See all 50 →</Link>
+          <Link href="/memes">See all →</Link>
         </div>
 
         <div className="featured-grid">
           <Link href="/memes/3" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/wop/meme-3.webp"
+                src="/wokeonpaper/memes/3.png"
                 alt="The theory of change versus the change that actually happens"
                 width={800}
                 height={800}
@@ -101,7 +121,7 @@ export default function Home() {
           <Link href="/memes/24" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/wop/meme-24.webp"
+                src="/wokeonpaper/memes/24.png"
                 alt="The NGO hospital"
                 width={800}
                 height={800}
@@ -121,7 +141,7 @@ export default function Home() {
           <Link href="/memes/38" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/wop/meme-38.webp"
+                src="/wokeonpaper/memes/38.png"
                 alt="Collaboration in the nonprofit sector"
                 width={800}
                 height={800}
@@ -158,21 +178,21 @@ export default function Home() {
 
         <div className="majdoor-images">
           <Image
-            src="/wokeonpaper/wop/meme-5.webp"
+            src="/wokeonpaper/memes/5.png"
             alt="WokeOnPaper meme"
             width={500}
             height={500}
           />
 
           <Image
-            src="/wokeonpaper/wop/meme-20.webp"
+            src="/wokeonpaper/memes/20.png"
             alt="WokeOnPaper meme"
             width={500}
             height={500}
           />
 
           <Image
-            src="/wokeonpaper/wop/meme-30.webp"
+            src="/wokeonpaper/memes/30.png"
             alt="A Bad NGO Worker"
             width={500}
             height={500}
@@ -181,7 +201,7 @@ export default function Home() {
       </section>
 
       <section className="archive-cta">
-        <p className="eyebrow">50 MEMES AND COUNTING</p>
+        <p className="eyebrow">THE FULL ARCHIVE</p>
 
         <h2>Read something. Get annoyed. Think about it.</h2>
 
@@ -195,8 +215,8 @@ export default function Home() {
           <Image
             src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
-            width={105}
-            height={105}
+            width={90}
+            height={90}
             className="footer-logo"
           />
         </div>
@@ -210,6 +230,9 @@ export default function Home() {
 
           <a href="mailto:wokeonpaper@gmail.com">
             wokeonpaper@gmail.com
+          </a>
+          <a href="https://www.instagram.com/wokeonpaper/" target="_blank" rel="noopener noreferrer">
+            @wokeonpaper on Instagram
           </a>
         </div>
       </footer>

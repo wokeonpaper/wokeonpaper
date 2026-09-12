@@ -48,8 +48,9 @@ export default async function MemePage({ params }: Props) {
           <Image
             src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
-            width={105}
-            height={48}
+            width={46}
+            height={46}
+            className="brand-logo"
             priority
           />
         </Link>
@@ -57,6 +58,7 @@ export default async function MemePage({ params }: Props) {
         <nav className="main-nav">
           <Link href="/">Home</Link>
           <Link href="/memes">Memes</Link>
+          <Link href="/stories">Stories</Link>
           <Link href="/about">About</Link>
         </nav>
       </header>
@@ -138,8 +140,8 @@ export default async function MemePage({ params }: Props) {
           <Image
             src="/wokeonpaper/wop/logo.png"
             alt="WokeOnPaper"
-            width={105}
-            height={105}
+            width={90}
+            height={90}
             className="footer-logo"
           />
         </div>
@@ -149,6 +151,9 @@ export default async function MemePage({ params }: Props) {
           <p>Nonprofit satire media for people who work in the social sector.</p>
           <a href="mailto:wokeonpaper@gmail.com">
             wokeonpaper@gmail.com
+          </a>
+          <a href="https://www.instagram.com/wokeonpaper/" target="_blank" rel="noopener noreferrer">
+            @wokeonpaper on Instagram
           </a>
         </div>
       </footer>

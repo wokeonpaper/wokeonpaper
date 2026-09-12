@@ -1,17 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
-import { memes } from "@/data/memes"
-import MemeGrid from "./MemeGrid"
 
 export const metadata = {
-  title: "Memes | WokeOnPaper",
-  description:
-    "Satire, humour and uncomfortable questions from the social sector.",
+  title: "About",
+  description: "The story behind WokeOnPaper.",
 }
 
-export default function MemesPage() {
+export default function AboutPage() {
   return (
-    <main className="memes-index-page">
+    <main>
       <header className="site-header">
         <Link href="/" className="brand">
           <Image
@@ -33,15 +30,16 @@ export default function MemesPage() {
       </header>
 
       <section className="memes-intro">
-        <p className="eyebrow">THE WOKE ON PAPER ARCHIVE</p>
-        <h1>Memes. Many uncomfortable questions.</h1>
+        <p className="eyebrow">ABOUT</p>
+        <h1>Satire, for people who've sat through one too many strategy workshops.</h1>
         <p className="memes-intro-text">
-          A growing collection of satire about work, funding, power,
-          communication and the everyday absurdities of the social sector.
+          WokeOnPaper is a satirical media project about the social sector —
+          the work, the funding, the jargon, and everything that happens when
+          a beautiful theory of change meets real life. We poke fun at the
+          system because we care about the people doing the actual work
+          inside it.
         </p>
       </section>
-
-      <MemeGrid memes={memes} />
 
       <footer className="site-footer">
         <div>
@@ -56,7 +54,7 @@ export default function MemesPage() {
 
         <div>
           <p className="footer-title">WokeOnPaper</p>
-          <p>Nonprofit satire media for people who work in the social sector.</p>
+          <p>Nonprofit satire media. Serving social sector workers since 2025.</p>
           <a href="mailto:wokeonpaper@gmail.com">wokeonpaper@gmail.com</a>
         </div>
       </footer>
