@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import SiteHeader from "@/app/components/SiteHeader"
+import SiteFooter from "@/app/components/SiteFooter"
 import { memes } from "@/data/memes"
 import MemeGrid from "./MemeGrid"
 
@@ -12,25 +14,7 @@ export const metadata = {
 export default function MemesPage() {
   return (
     <main className="memes-index-page">
-      <header className="site-header">
-        <Link href="/" className="brand">
-          <Image
-            src="/wokeonpaper/wop/logo.png"
-            alt="WokeOnPaper"
-            width={46}
-            height={46}
-            className="brand-logo"
-            priority
-          />
-        </Link>
-
-        <nav className="main-nav">
-          <Link href="/">Home</Link>
-          <Link href="/memes">Memes</Link>
-          <Link href="/stories">Stories</Link>
-          <Link href="/about">About</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="memes-intro">
         <p className="eyebrow">THE WOKE ON PAPER ARCHIVE</p>
@@ -43,23 +27,7 @@ export default function MemesPage() {
 
       <MemeGrid memes={memes} />
 
-      <footer className="site-footer">
-        <div>
-          <Image
-            src="/wokeonpaper/wop/logo.png"
-            alt="WokeOnPaper"
-            width={90}
-            height={90}
-            className="footer-logo"
-          />
-        </div>
-
-        <div>
-          <p className="footer-title">WokeOnPaper</p>
-          <p>Nonprofit satire media for people who work in the social sector.</p>
-          <a href="mailto:wokeonpaper@gmail.com">wokeonpaper@gmail.com</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }

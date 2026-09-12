@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import SiteHeader from "@/app/components/SiteHeader"
+import SiteFooter from "@/app/components/SiteFooter"
 
 export const metadata = {
   title: "About",
@@ -9,25 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <header className="site-header">
-        <Link href="/" className="brand">
-          <Image
-            src="/wokeonpaper/wop/logo.png"
-            alt="WokeOnPaper"
-            width={46}
-            height={46}
-            className="brand-logo"
-            priority
-          />
-        </Link>
-
-        <nav className="main-nav">
-          <Link href="/">Home</Link>
-          <Link href="/memes">Memes</Link>
-          <Link href="/stories">Stories</Link>
-          <Link href="/about">About</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="memes-intro">
         <p className="eyebrow">ABOUT</p>
@@ -41,23 +25,7 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <footer className="site-footer">
-        <div>
-          <Image
-            src="/wokeonpaper/wop/logo.png"
-            alt="WokeOnPaper"
-            width={90}
-            height={90}
-            className="footer-logo"
-          />
-        </div>
-
-        <div>
-          <p className="footer-title">WokeOnPaper</p>
-          <p>Nonprofit satire media. Serving social sector workers since 2025.</p>
-          <a href="mailto:wokeonpaper@gmail.com">wokeonpaper@gmail.com</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }
