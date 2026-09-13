@@ -2776,37 +2776,44 @@ img {
 }
 
 .fc-promo-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fc-promo-badge-visual {
   position: relative;
+  width: 100%;
   aspect-ratio: 1 / 1;
+}
+
+.fc-promo-badge-circle {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76%;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .fc-promo-photo {
   position: absolute;
-  top: -22%;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 62%;
+  width: 94%;
   height: auto;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   object-fit: contain;
 }
 
-.fc-promo-badge-ring {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: var(--purple);
-  border: 2px dashed rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-}
-
 .fc-promo-num {
+  margin-top: 14px;
   font-family: "Space Grotesk", Arial, sans-serif;
   font-size: clamp(44px, 5vw, 72px);
   font-weight: 700;
