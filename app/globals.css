@@ -2141,3 +2141,94 @@ img {
     font-size: 16px;
   }
 }
+
+/* =========================
+   CONTRIBUTE (About page)
+   ========================= */
+
+.contribute {
+  padding: 4vw 0 8vw;
+  background: var(--paper);
+}
+
+.contribute-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contribute-inner h2 {
+  margin: 14px 0 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--purple-dark);
+}
+
+.contribute-lead {
+  margin: 22px 0 0;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #3a353d;
+}
+
+.contribute-inner h3 {
+  margin: 46px 0 14px;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 23px;
+  letter-spacing: -0.02em;
+  color: var(--purple);
+}
+
+.contribute-sub {
+  margin: 0 0 18px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #66606a;
+}
+
+.contribute-inner p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #2c2830;
+  margin: 0 0 18px;
+}
+
+.contribute-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contribute-list li {
+  padding: 16px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--purple);
+  font-size: 16px;
+  line-height: 1.55;
+  color: #3a353d;
+}
+
+.contribute-list strong {
+  color: var(--purple-dark);
+}
+
+.contribute-cta {
+  margin-top: 50px;
+  padding: 34px;
+  background: var(--lilac);
+  border-radius: 16px;
+}
+
+.contribute-cta h3 {
+  margin-top: 0;
+}
+
+.contribute-cta .hero-button {
+  margin-top: 10px;
+}
