@@ -331,11 +331,14 @@ export default function FrustrationCard() {
           {canShare && (
             <button className="fc-btn-ghost fc-caps" onClick={shareResult}>Share my card</button>
           )}
-        </div>
-        <div className="fc-actions">
           <button className="fc-btn-ghost fc-caps" onClick={restart}>Start over</button>
           <Link href="/" className="fc-btn-ghost fc-caps">Back home</Link>
         </div>
+
+        <p className="fc-share-note">
+          Download your card and share it on social media. Don&apos;t forget to tag @wokeonpaper
+          on Instagram.
+        </p>
       </div>
     </div>
   )

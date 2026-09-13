@@ -2598,6 +2598,13 @@ img {
   margin-top: 34px;
 }
 
+.fc-share-note {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 /* Visible, responsive card preview — the real card is fixed at
    1080x1350 for export and scaled down with a CSS transform to fit. */
 .fc-card-preview {
