@@ -6,124 +6,123 @@ export type Question = {
   options: Option[]
 }
 
-export type CategoryKey = "transparency" | "impact" | "pay" | "reality"
+export type CategoryKey = "pay" | "workCulture" | "values"
 
 export const CATEGORY_LABELS: Record<CategoryKey, string> = {
-  transparency: "Transparency & Governance",
-  impact: "Impact",
-  pay: "Pay & Work Culture",
-  reality: "Sector Reality",
+  pay: "Pay",
+  workCulture: "Work Culture",
+  values: "Values & Integrity",
 }
 
 export const questions: Question[] = [
   {
     id: 1,
-    category: "transparency",
-    text: "How clearly does your organisation explain where its money comes from and where it goes?",
+    category: "pay",
+    text: "Are you satisfied with what your organisation pays you?",
     options: [
-      { label: "Very clearly — I can find this information easily.", score: 0 },
-      { label: "Somewhat clearly — I know the broad picture.", score: 1 },
-      { label: "Not very clearly — I have to ask around.", score: 2 },
-      { label: "I genuinely have no idea.", score: 3 },
+      { label: "I'm paid fairly.", score: 0 },
+      { label: "It's okay, but I expected better.", score: 1 },
+      { label: "For the work I do, it feels low.", score: 2 },
+      { label: "Passion is not a payment method.", score: 3 },
     ],
   },
   {
     id: 2,
-    category: "transparency",
-    text: "How transparent is your organisation about senior leadership pay?",
+    category: "pay",
+    text: "How confident are you that your pay reflects your level of responsibility?",
     options: [
-      { label: "Completely transparent — ranges or actual compensation are openly available.", score: 0 },
-      { label: "Somewhat transparent — I know roughly what senior leaders earn.", score: 1 },
-      { label: "Not transparent — compensation is rarely discussed.", score: 2 },
-      { label: "It feels like a forbidden question.", score: 3 },
+      { label: "Yes. It feels fair.", score: 0 },
+      { label: "Mostly. There are some gaps.", score: 1 },
+      { label: "Not really.", score: 2 },
+      { label: "My responsibilities got promoted. My salary didn't.", score: 3 },
     ],
   },
   {
     id: 3,
-    category: "transparency",
-    text: "When an important organisational decision is made, how clearly do you understand who made it and why?",
+    category: "pay",
+    text: "How transparent is your organisation about salaries and pay differences?",
     options: [
-      { label: "Very clearly — the reasoning is usually explained.", score: 0 },
-      { label: "Mostly clearly — I understand it, even if I wasn't involved.", score: 1 },
-      { label: "Often unclear — decisions appear with little explanation.", score: 2 },
-      { label: "Decisions simply arrive from somewhere above.", score: 3 },
+      { label: "Very transparent.", score: 0 },
+      { label: "Somewhat transparent.", score: 1 },
+      { label: "Most people have to guess.", score: 2 },
+      { label: "Salary is treated like classified information.", score: 3 },
     ],
   },
   {
     id: 4,
-    category: "transparency",
-    text: "How comfortable are you asking your leadership, \u201cWhy did we decide this?\u201d",
+    category: "workCulture",
+    text: "How comfortable are you telling your manager or leadership that you disagree with a decision?",
     options: [
-      { label: "Very comfortable — questioning decisions is encouraged.", score: 0 },
-      { label: "Comfortable, but I choose my moments.", score: 1 },
-      { label: "I would probably think twice.", score: 2 },
-      { label: "I would rather not risk it.", score: 3 },
+      { label: "Very comfortable. It's encouraged.", score: 0 },
+      { label: "I can disagree if I choose my words carefully.", score: 1 },
+      { label: "I usually keep it to myself.", score: 2 },
+      { label: "I know better than to try.", score: 3 },
     ],
   },
   {
     id: 5,
-    category: "impact",
-    text: "Do you believe your organisation's work is creating meaningful change for the people it exists to serve?",
+    category: "workCulture",
+    text: "What usually happens when the workload becomes too much?",
     options: [
-      { label: "Yes — we have strong evidence that it is.", score: 0 },
-      { label: "Mostly — there is evidence, although it is hard to measure.", score: 1 },
-      { label: "Somewhat — I believe in the intent more than the evidence.", score: 2 },
-      { label: "Honestly, I'm not sure.", score: 3 },
+      { label: "We reprioritise and make space.", score: 0 },
+      { label: "We figure it out together.", score: 1 },
+      { label: "We somehow make it work.", score: 2 },
+      { label: "We call it commitment and carry on.", score: 3 },
     ],
   },
   {
     id: 6,
-    category: "impact",
-    text: "When something your organisation does isn't working, what usually happens?",
+    category: "workCulture",
+    text: "Which best describes your organisation's approach to employee wellbeing?",
     options: [
-      { label: "We examine the evidence and change our approach.", score: 0 },
-      { label: "We discuss it and sometimes make changes.", score: 1 },
-      { label: "We usually find a way to present it differently.", score: 2 },
-      { label: "We keep doing it because the funder/report/deadline requires it.", score: 3 },
+      { label: "People's wellbeing is genuinely taken seriously.", score: 0 },
+      { label: "There are good intentions and some support.", score: 1 },
+      { label: "There is a wellbeing policy. The workload remains.", score: 2 },
+      { label: "We need a wellbeing programme for the people running the wellbeing programme.", score: 3 },
     ],
   },
   {
     id: 7,
-    category: "pay",
-    text: "Are you satisfied with what your organisation pays you for the work you do?",
+    category: "values",
+    text: "How much does your organisation practise the values it talks about publicly?",
     options: [
-      { label: "Yes — I feel fairly compensated.", score: 0 },
-      { label: "Mostly — some concerns, but it feels reasonable.", score: 1 },
-      { label: "Not really — it doesn't reflect the work or responsibility.", score: 2 },
-      { label: "Absolutely not — \u201cbut it's a nonprofit\u201d is not a compensation strategy.", score: 3 },
+      { label: "Quite consistently.", score: 0 },
+      { label: "Mostly, with some contradictions.", score: 1 },
+      { label: "There is a noticeable gap between words and practice.", score: 2 },
+      { label: "Sometimes the irony writes itself.", score: 3 },
     ],
   },
   {
     id: 8,
-    category: "pay",
-    text: "Which best describes your organisation's work culture?",
+    category: "values",
+    text: "When something your organisation is doing is clearly not working, what happens?",
     options: [
-      { label: "Healthy — people can disagree, set boundaries and ask for help.", score: 0 },
-      { label: "Mostly healthy — stressful periods, but manageable.", score: 1 },
-      { label: "Mission-driven but exhausting — work comes at the expense of people.", score: 2 },
-      { label: "We need a wellbeing programme for our wellbeing programme.", score: 3 },
+      { label: "We look at the evidence and change course.", score: 0 },
+      { label: "We discuss it and sometimes change course.", score: 1 },
+      { label: "We find a better way to present it.", score: 2 },
+      { label: "We call it impact and move on.", score: 3 },
     ],
   },
   {
     id: 9,
-    category: "reality",
-    text: "How often do you encounter contradictions between what the sector preaches and what it practises?",
+    category: "values",
+    text: "How much do you know about who makes important decisions in your organisation and why?",
     options: [
-      { label: "Rarely — the sector generally practises what it preaches.", score: 0 },
-      { label: "Occasionally — contradictions exist, but they're acknowledged.", score: 1 },
-      { label: "Often — a noticeable gap between values and practice.", score: 2 },
-      { label: "Constantly — sometimes the irony writes itself.", score: 3 },
+      { label: "The decision making is clear.", score: 0 },
+      { label: "I understand most of it.", score: 1 },
+      { label: "A lot happens behind closed doors.", score: 2 },
+      { label: "Decisions simply arrive from somewhere above.", score: 3 },
     ],
   },
   {
     id: 10,
-    category: "reality",
-    text: "Which statement best describes how you currently feel about working in the nonprofit sector?",
+    category: "values",
+    text: "Which statement comes closest to how you feel about the nonprofit sector right now?",
     options: [
-      { label: "I'm optimistic. There's a lot worth fixing, but I still believe in it.", score: 0 },
-      { label: "I'm hopeful, but increasingly critical.", score: 1 },
-      { label: "I care about the work, but the sector tests my patience.", score: 2 },
-      { label: "I believe in the mission. I just wish the sector practised what it preached.", score: 3 },
+      { label: "I believe in the sector and its direction.", score: 0 },
+      { label: "I believe in the work, but I have questions.", score: 1 },
+      { label: "I believe in the mission more than the way the sector operates.", score: 2 },
+      { label: "I believe in the mission. The sector needs to have a serious word with itself.", score: 3 },
     ],
   },
 ]
@@ -131,24 +130,46 @@ export const questions: Question[] = [
 export type Band = { min: number; max: number; title: string; copy: string }
 
 export const bands: Band[] = [
-  { min: 0, max: 20, title: "Suspiciously Unfrustrated", copy: "Either you've found a remarkably functional corner of the nonprofit sector, or you haven't attended enough meetings yet." },
-  { min: 21, max: 40, title: "Mildly Frustrated", copy: "You still believe the sector can change. You just wish it would stop making you fill out three forms to prove it." },
-  { min: 41, max: 60, title: "Properly Frustrated", copy: "You've seen enough to know that good intentions and good systems are not always the same thing." },
-  { min: 61, max: 80, title: "Seriously Frustrated", copy: "You still care about the work. You're just increasingly convinced that \u201clet's take this offline\u201d is where good ideas go to disappear." },
-  { min: 81, max: 95, title: "Extremely Frustrated", copy: "You believe in the mission. Your patience, however, has started exploring other opportunities." },
-  { min: 96, max: 100, title: "Woke Beyond Repair", copy: "Congratulations. You have reached the point where sector jargon no longer works on you." },
+  {
+    min: 0,
+    max: 49,
+    title: "You're doing surprisingly okay.",
+    copy: "Either you've found a healthy corner of the sector or you've developed an impressive tolerance for nonprofit nonsense.",
+  },
+  {
+    min: 50,
+    max: 59,
+    title: "This is a good amount of frustration.",
+    copy: "You care enough to be annoyed. That's usually where the interesting questions begin.",
+  },
+  {
+    min: 60,
+    max: 69,
+    title: "You are likely overdue for a serious conversation.",
+    copy: "You still believe in the work. You're just beginning to wonder why the sector makes the work so unnecessarily difficult.",
+  },
+  {
+    min: 70,
+    max: 79,
+    title: "Start saving for therapy.",
+    copy: "You've moved beyond mild irritation. The mission still matters. Your patience is another story.",
+  },
+  {
+    min: 80,
+    max: 89,
+    title: "You are running on belief and resentment.",
+    copy: "You're still here because you care. At this point, “let's take this offline” may be enough to ruin your entire afternoon.",
+  },
+  {
+    min: 90,
+    max: 100,
+    title: "Your frustration is in the top 5%.",
+    copy: "Time to say bye bye to the organisation. Beg, borrow, steal and go for therapy.",
+  },
 ]
 
-export const categoryInsight: Record<CategoryKey, string> = {
-  transparency: "You'd like to know who made the decision, why they made it and where the money went. Revolutionary.",
-  impact: "You're beginning to suspect that \u201cimpact\u201d shouldn't just be a column in a report.",
-  pay: "You believe in the mission. You'd also like to be paid fairly for advancing it.",
-  reality: "You've noticed that sometimes the sector's biggest contradictions are hiding in plain sight.",
-}
-
-export const categoryPersonal: Record<CategoryKey, (name: string) => string> = {
-  transparency: (n) => `${n}, you're asking for something radical: transparency.`,
-  impact: (n) => `${n}, you don't just want to hear about impact. You want to know whether it's actually happening.`,
-  pay: (n) => `${n}, turns out passion doesn't pay the rent.`,
-  reality: (n) => `${n}, you've clearly spent enough time in the sector to recognise the irony.`,
+export const biggestFrustrationCopy: Record<CategoryKey, string> = {
+  pay: "You don't mind working for a cause. You'd just like the cause to pay you properly.",
+  workCulture: "You came for meaningful work. You did not necessarily sign up for permanent exhaustion.",
+  values: "You can handle difficult work. It's the gap between what the sector says and what it does that's getting to you.",
 }

@@ -2309,17 +2309,12 @@ img {
   background: var(--paper);
 }
 
+.fc-caps { text-transform: uppercase; letter-spacing: 0.03em; }
+
 /* Intro + name */
 .fc-intro {
   max-width: 620px;
   text-align: center;
-}
-
-.fc-kicker {
-  font-size: 13px;
-  font-weight: 700;
-  color: #8a6f97;
-  margin: 0 0 18px;
 }
 
 .fc-intro h1 {
@@ -2338,9 +2333,10 @@ img {
   color: #4d4750;
 }
 
-.fc-disclaimer {
-  margin: 26px 0 0;
-  font-size: 13px;
+.fc-small-copy {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -2517,6 +2513,15 @@ img {
 /* Result summary */
 .fc-result { width: 100%; max-width: 680px; }
 
+.fc-result-name {
+  margin: 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: clamp(26px, 3.4vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--purple-dark);
+}
+
 .fc-big-percent {
   margin: 0;
   font-family: "Space Grotesk", Arial, sans-serif;
@@ -2525,13 +2530,6 @@ img {
   letter-spacing: -0.05em;
   color: var(--purple);
   font-weight: 700;
-}
-
-.fc-frustrated-label {
-  margin: 6px 0 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--muted);
 }
 
 .fc-band-title {
@@ -2567,7 +2565,6 @@ img {
 }
 
 .fc-insight { margin: 10px 0 0; font-size: 16px; line-height: 1.55; color: #4d4750; }
-.fc-personal { margin: 12px 0 0; font-size: 17px; font-weight: 600; color: var(--purple); }
 
 .fc-breakdown { margin-top: 36px; display: flex; flex-direction: column; gap: 18px; }
 
@@ -2601,19 +2598,28 @@ img {
   margin-top: 34px;
 }
 
-/* Hidden export card — rendered at 1080x1350 off-screen */
-.fc-export-wrap {
-  position: absolute;
-  left: -99999px;
-  top: 0;
+/* Visible, responsive card preview — the real card is fixed at
+   1080x1350 for export and scaled down with a CSS transform to fit. */
+.fc-card-preview {
+  position: relative;
+  width: min(420px, 100%);
+  margin: 40px auto 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(50, 22, 63, 0.25);
 }
 
 .fc-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
   width: 1080px;
   height: 1350px;
   background: var(--purple);
   color: white;
-  padding: 90px 80px;
+  padding: 80px 76px;
   display: flex;
   flex-direction: column;
   font-family: "DM Sans", Arial, sans-serif;
@@ -2628,22 +2634,22 @@ img {
   color: #d8c4e2;
 }
 
-.fc-card-hero { margin-top: 70px; }
+.fc-card-hero { margin-top: 46px; }
 
 .fc-card-name {
   margin: 0;
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-.fc-card-is { margin: 8px 0 0; font-size: 40px; color: #d8c4e2; }
+.fc-card-is { margin: 6px 0 0; font-size: 34px; color: #d8c4e2; }
 
 .fc-card-percent {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 300px;
+  font-size: 250px;
   line-height: 0.82;
   font-weight: 700;
   letter-spacing: -0.05em;
@@ -2651,53 +2657,62 @@ img {
 }
 
 .fc-card-frustrated {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 52px;
+  font-size: 46px;
   line-height: 1.05;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
-.fc-card-band { margin-top: 60px; }
+.fc-card-band { margin-top: 38px; }
 
 .fc-card-band-title {
   margin: 0;
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 46px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--yellow);
 }
 
 .fc-card-band-copy {
-  margin: 16px 0 0;
-  font-size: 27px;
-  line-height: 1.45;
+  margin: 12px 0 0;
+  font-size: 23px;
+  line-height: 1.4;
   color: #ede2f2;
 }
 
+.fc-card-section-label {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d8c4e2;
+}
+
 .fc-card-cats {
-  margin-top: auto;
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 14px;
 }
 
 .fc-card-bar-row {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 20px;
 }
 
 .fc-card-bar-label {
-  width: 380px;
-  font-size: 26px;
+  width: 300px;
+  font-size: 23px;
   font-weight: 600;
 }
 
 .fc-card-bar-track {
   flex: 1;
-  height: 16px;
+  height: 14px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   overflow: hidden;
@@ -2710,14 +2725,35 @@ img {
 }
 
 .fc-card-bar-pct {
-  width: 90px;
+  width: 80px;
   text-align: right;
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 700;
 }
 
+.fc-card-biggest {
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.fc-card-biggest-cat {
+  margin: 8px 0 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.fc-card-biggest-copy {
+  margin: 8px 0 0;
+  font-size: 21px;
+  line-height: 1.45;
+  color: #ede2f2;
+}
+
 .fc-card-foot {
-  margin-top: 60px;
+  margin-top: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
