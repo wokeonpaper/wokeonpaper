@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WokeOnPaper
 
-## Getting Started
+Nonprofit satire media for people who work in the social sector. Memes, long-form stories, and commentary on power, funding and work culture — nudging the sector towards being more honest, participatory and democratic.
 
-First, run the development server:
+- **Live site:** https://wokeonpaper.github.io/wokeonpaper/
+- **Instagram:** https://www.instagram.com/wokeonpaper/
+
+---
+
+## Tech stack
+
+- **Next.js 16** (App Router) — the website framework
+- **React 19** + **TypeScript**
+- **Tailwind CSS 4** (available) + a custom stylesheet in `app/globals.css`
+- **Static export** (`output: "export"`) — the site builds to plain HTML/CSS/JS
+- **Deployed to GitHub Pages** via GitHub Actions, served under the `/wokeonpaper` base path
+
+---
+
+## Running it locally
+
+You need [Node.js](https://nodejs.org/) 20 or newer installed.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install        # first time only — installs dependencies
+npm run dev        # starts the local dev server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open **http://localhost:3000/wokeonpaper** in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Note: the site lives under `/wokeonpaper` (not the root `/`) because it deploys to GitHub Pages at a subpath. Always include `/wokeonpaper` in local URLs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Other commands:
 
-## Learn More
+```bash
+npm run build      # produces the static site in the ./out folder
+npm run lint       # checks code style
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Important:** all styling lives in `app/globals.css`. There are no per-component style files.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to add a new meme
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Add the image to `public/memes/` (e.g. `51.png`). Keep images in **4:5 ratio** so no text is cut.
+2. Add an entry to the `memes` array in `data/memes.ts`:
+
+```ts
+{
+  id: 51,
+  title: "Your Meme Title",
+  subheading: "A one-line summary.",
+  body: [
+    "First paragraph of commentary.",
+    "Second paragraph.",
+  ],
+  category: "Work Culture",
+  tags: ["tag1", "tag2"],
+  image: "/wokeonpaper/memes/51.png"
+}
+```
+
+The homepage, archive, filters and individual page update automatically.
+
+---
+
+## How to add a new story
+
+1. Add the cover image (and any supporting images) to `public/stories/`. Keep covers in **4:5 ratio**.
+2. Add an entry to the `stories` array in `data/stories.ts`:
+
+```ts
+{
+  id: 11,
+  slug: "your-story-slug",          // becomes the URL: /stories/your-story-slug
+  title: "Your Story Title",
+  dek: "A one-line description shown under the title.",
+  tag: "Category Name",
+  cover: "/wokeonpaper/stories/your-cover.png",
+  images: ["/wokeonpaper/stories/your-support.png"],   // optional
+  author: "Social Sector Majdoor Union",
+  authorHandle: "wokeonpaper",
+  readTime: "6 min read",
+  sections: [
+    {
+      heading: "Section Heading",
+      paragraphs: ["Paragraph one.", "Paragraph two."],
+      quote: "An optional pull-quote for a strong statement.",   // optional
+      quoteAttribution: "Name, role",                            // optional
+      figure: "/wokeonpaper/stories/your-support.png",           // optional inline image
+      figureCaption: "Optional caption for the figure."          // optional
+    }
+  ]
+}
+```
+
+The stories index and blog page generate automatically from this.
+
+---
+
+## Deploying (publishing changes)
+
+The workflow is: **edit → commit → push to `main` → auto-deploy.**
+
+```bash
+git add .
+git commit -m "Describe what you changed"
+git push origin main
+```
+
+Pushing to `main` triggers GitHub Actions (`.github/workflows/deploy.yml`), which builds the site and publishes it to GitHub Pages. The live site updates within a few minutes. Check deploy status at:
+https://github.com/wokeonpaper/wokeonpaper/actions
+
+**Tip:** run `npm run build` locally before pushing. If it builds cleanly there, the deploy will succeed.
+
+---
+
+## Content notes
+
+Some stories cite specific statistics and sources transcribed from source decks. Verify figures and attributions against original sources before promoting widely.
