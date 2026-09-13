@@ -17,12 +17,8 @@ export default function MemesPage() {
       <SiteHeader />
 
       <section className="memes-intro">
-        <p className="eyebrow">THE WOKE ON PAPER ARCHIVE</p>
-        <h1>Memes. Many uncomfortable questions.</h1>
-        <p className="memes-intro-text">
-          A growing collection of satire about work, funding, power,
-          communication and the everyday absurdities of the social sector.
-        </p>
+        <h1>Laugh. Laugh harder. Then ask &mdash; are we woke only on paper?</h1>
+        <p className="memes-intro-text">Satirical takes on the everyday realities, contradictions and absurdities of the nonprofit sector &mdash; because sometimes laughter is the easiest way to start a harder conversation.</p>
       </section>
 
       <MemeGrid memes={memes} />

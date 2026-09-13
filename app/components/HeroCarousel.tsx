@@ -41,16 +41,6 @@ export default function HeroCarousel() {
           ))}
         </div>
       </div>
-
-      <div className="hero-chip hero-chip-top">
-        <span className="hero-chip-num">50+</span>
-        <span className="hero-chip-label">memes &amp; counting</span>
-      </div>
-
-      <div className="hero-chip hero-chip-bottom">
-        <span className="hero-chip-num">10</span>
-        <span className="hero-chip-label">long-form stories</span>
-      </div>
     </div>
   )
 }

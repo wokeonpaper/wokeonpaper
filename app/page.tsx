@@ -9,19 +9,17 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-      <section className="hero">
+            <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">WOKE ON PAPER</p>
-
           <h1>
-            For people who work in the social sector.
+            Serving nonprofit satire
             <br />
-            And have questions.
+            since 2025.
           </h1>
 
           <p>
-            The social sector is full of big ideas. We look at what happens
-            when they meet real life.
+            An independent satire collective of development practitioners, nudging
+            the social sector to laugh at itself, listen better, and do better.
           </p>
 
           <Link href="/memes" className="hero-button">
@@ -30,9 +28,7 @@ export default function Home() {
         </div>
 
         <div className="hero-image">
-          <div className="hero-paper">
-            <HeroCarousel />
-          </div>
+          <HeroCarousel />
         </div>
       </section>
 
@@ -70,6 +66,26 @@ export default function Home() {
           </div>
         </div>
         <p className="stats-source">Source: NGO Darpan, India&apos;s NGO registration portal.</p>
+      </section>
+
+      <section className="fc-promo">
+        <div className="fc-promo-inner">
+          <div className="fc-promo-text">
+            <p className="fc-promo-kicker">Take the quiz</p>
+            <h2>How frustrated are you with the nonprofit sector?</h2>
+            <p>
+              Ten brutally honest questions. One highly unscientific score. Find out just how
+              much the sector has tested your patience &mdash; then share your Frustration Card.
+            </p>
+            <Link href="/frustration-card" className="hero-button">
+              Calculate my frustration →
+            </Link>
+          </div>
+          <div className="fc-promo-badge" aria-hidden="true">
+            <span className="fc-promo-num">?%</span>
+            <span className="fc-promo-label">frustrated</span>
+          </div>
+        </div>
       </section>
 
       <section className="featured-section">
@@ -146,8 +162,6 @@ export default function Home() {
 
       <section className="majdoor-section">
         <div className="majdoor-copy">
-          <p className="eyebrow">SOCIAL SECTOR MAJDOOR UNION</p>
-
           <h2>For the people doing the work.</h2>
 
           <p>
@@ -160,27 +174,16 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="majdoor-images">
-          <Image
-            src="/wokeonpaper/memes/5.png"
-            alt="WokeOnPaper meme"
-            width={500}
-            height={500}
-          />
-
-          <Image
-            src="/wokeonpaper/memes/20.png"
-            alt="WokeOnPaper meme"
-            width={500}
-            height={500}
-          />
-
-          <Image
-            src="/wokeonpaper/memes/30.png"
-            alt="A Bad NGO Worker"
-            width={500}
-            height={500}
-          />
+        <div className="majdoor-fan">
+          <Link href="/memes/5" className="fan-card fan-card-1">
+            <Image src="/wokeonpaper/memes/5.png" alt="WokeOnPaper meme" width={500} height={625} />
+          </Link>
+          <Link href="/memes/20" className="fan-card fan-card-2">
+            <Image src="/wokeonpaper/memes/20.png" alt="WokeOnPaper meme" width={500} height={625} />
+          </Link>
+          <Link href="/memes/30" className="fan-card fan-card-3">
+            <Image src="/wokeonpaper/memes/30.png" alt="A Bad NGO Worker" width={500} height={625} />
+          </Link>
         </div>
       </section>
 

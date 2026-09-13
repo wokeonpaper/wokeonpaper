@@ -16,12 +16,8 @@ export default function StoriesPage() {
       <SiteHeader />
 
       <section className="memes-intro">
-        <p className="eyebrow">LONG-FORM</p>
-        <h1>Stories worth sitting with.</h1>
-        <p className="memes-intro-text">
-          Reporting and commentary on governance, power and work culture in the
-          Indian social sector — the stuff that doesn&apos;t fit in a single meme.
-        </p>
+        <h1>Hot takes on power, politics, governance and work culture shaping India&apos;s social sector.</h1>
+        <p className="memes-intro-text">Because some of the sector&apos;s most important stories are the ones we don&apos;t talk about enough.</p>
       </section>
 
       <section className="story-nav-grid">
