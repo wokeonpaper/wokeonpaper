@@ -3,6 +3,7 @@ import Link from "next/link"
 import SiteHeader from "@/app/components/SiteHeader"
 import SiteFooter from "@/app/components/SiteFooter"
 import HeroCarousel from "@/app/components/HeroCarousel"
+import { stories } from "@/data/stories"
 
 export default function Home() {
   return (
@@ -30,19 +31,6 @@ export default function Home() {
         <div className="hero-image">
           <HeroCarousel />
         </div>
-      </section>
-
-      <section className="intro-section">
-        <p className="eyebrow">WHY WOKE ON PAPER?</p>
-
-        <h2>
-          The social sector has no shortage of reports, frameworks, theories
-          of change and impact dashboards.
-        </h2>
-
-        <p>
-          It could use a little more honesty.
-        </p>
       </section>
 
       <section className="sector-stats">
@@ -167,6 +155,73 @@ export default function Home() {
               </p>
             </div>
           </Link>
+
+          <Link href="/memes/14" className="featured-card">
+            <div className="featured-image">
+              <Image
+                src="/wokeonpaper/memes/14.png"
+                alt="Impact vs Instagram"
+                width={800}
+                height={800}
+              />
+            </div>
+
+            <div className="featured-copy">
+              <span>14 · COMMUNICATIONS</span>
+              <h3>Impact vs Instagram</h3>
+              <p>
+                What happened on the ground and what happened on social media
+                are often two different stories.
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/memes/43" className="featured-card">
+            <div className="featured-image">
+              <Image
+                src="/wokeonpaper/memes/43.png"
+                alt="Authentic stories, carefully edited"
+                width={800}
+                height={800}
+              />
+            </div>
+
+            <div className="featured-copy">
+              <span>43 · COMMUNICATIONS</span>
+              <h3>Authentic Stories, Carefully Edited</h3>
+              <p>
+                We want the complexity of the ground, but please remove
+                anything complicated.
+              </p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      <section className="featured-section home-stories-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">LONG-FORM</p>
+            <h2>Stories worth sitting with.</h2>
+          </div>
+
+          <Link href="/stories">See all →</Link>
+        </div>
+
+        <div className="story-nav-grid home-story-grid">
+          {stories.slice(0, 5).map((story) => (
+            <Link key={story.slug} href={`/stories/${story.slug}`} className="story-preview-card">
+              <div className="story-preview-image">
+                <Image src={story.cover} alt={story.title} width={800} height={1000} />
+              </div>
+              <div className="story-preview-copy">
+                <span className="story-tag">{story.tag}</span>
+                <h2>{story.title}</h2>
+                <p>{story.dek}</p>
+                <span className="read-meme">Read the story →</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

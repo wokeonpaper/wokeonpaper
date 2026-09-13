@@ -157,6 +157,11 @@ export default function FrustrationCard() {
           <button className="fc-btn-primary fc-caps" onClick={() => setStage("name")}>
             Get my Frustration Card
           </button>
+          <p className="fc-privacy-note">
+            We don&apos;t collect, store or share your responses or personal information. Your
+            Frustration Card is generated just for you and stays with you. No sign ups, no email
+            addresses, no data trails.
+          </p>
         </div>
       </div>
     )
@@ -311,7 +316,7 @@ export default function FrustrationCard() {
             </div>
 
             <div className="fc-card-foot">
-              <span>wokeonpaper.in</span>
+              <span>Get yours at wokeonpaper.in</span>
               <span>A completely unscientific measure of sector frustration.</span>
             </div>
           </div>
