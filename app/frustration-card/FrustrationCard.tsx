@@ -244,7 +244,7 @@ export default function FrustrationCard() {
         <div className="fc-export-wrap" aria-hidden="true">
           <div className="fc-card" ref={cardRef}>
             <div className="fc-card-top">
-              <span>WOKE ON PAPER</span>
+              <span>WokeOnPaper</span>
               <span>THE FRUSTRATION CARD</span>
             </div>
 
@@ -273,7 +273,7 @@ export default function FrustrationCard() {
             </div>
 
             <div className="fc-card-foot">
-              <span>wokeonpaper.com</span>
+              <span>Get yours at wokeonpaper.in</span>
               <span>A highly unscientific measure of sector frustration.</span>
             </div>
           </div>

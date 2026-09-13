@@ -82,8 +82,17 @@ export default function Home() {
             </Link>
           </div>
           <div className="fc-promo-badge" aria-hidden="true">
-            <span className="fc-promo-num">?%</span>
-            <span className="fc-promo-label">frustrated</span>
+            <Image
+              src="/wokeonpaper/wop/frustration-guy.png"
+              alt=""
+              width={360}
+              height={360}
+              className="fc-promo-photo"
+            />
+            <div className="fc-promo-badge-ring">
+              <span className="fc-promo-num">?%</span>
+              <span className="fc-promo-label">frustrated</span>
+            </div>
           </div>
         </div>
       </section>
