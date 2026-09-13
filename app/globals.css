@@ -2357,44 +2357,43 @@ img {
 .fc-input:focus { border-color: var(--purple); }
 
 /* Buttons */
-.fc-btn-primary {
-  margin-top: 30px;
-  padding: 15px 30px;
-  background: var(--purple);
-  color: white;
+.fc-btn-primary,
+.fc-btn-dark,
+.fc-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 28px;
   font-weight: 700;
   font-size: 15px;
-  border: none;
+  line-height: 1;
   border-radius: 999px;
   cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.fc-btn-primary {
+  margin-top: 30px;
+  background: var(--purple);
+  color: white;
+  border: none;
   transition: background 0.2s ease, transform 0.15s ease;
 }
 .fc-btn-primary:hover:not(:disabled) { background: var(--purple-dark); }
 .fc-btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .fc-btn-dark {
-  padding: 15px 26px;
   background: var(--ink);
   color: white;
-  font-weight: 700;
-  font-size: 15px;
   border: none;
-  border-radius: 999px;
-  cursor: pointer;
 }
 
 .fc-btn-ghost {
-  padding: 14px 22px;
   background: transparent;
   color: var(--purple-dark);
-  font-weight: 700;
-  font-size: 14px;
   border: 1.5px solid var(--line);
-  border-radius: 999px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
 }
 .fc-btn-ghost:hover:not(:disabled) { border-color: var(--purple); }
 .fc-btn-ghost:disabled { opacity: 0.35; cursor: not-allowed; }
