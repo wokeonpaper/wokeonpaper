@@ -1063,6 +1063,73 @@ img {
   margin-top: 44px;
 }
 
+.tweet-card {
+  width: 100%;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tweet-card:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+
+.tweet-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5vw;
+  background: rgba(23, 19, 26, 0.9);
+  cursor: zoom-out;
+}
+
+.tweet-lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  cursor: default;
+}
+
+.tweet-lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tweet-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 640px) {
+  .tweet-lightbox {
+    padding: 4vh 4vw;
+  }
+  .tweet-lightbox-close {
+    top: 14px;
+    right: 14px;
+  }
+}
+
 /* =========================
    MAJDOOR SECTION
    ========================= */
@@ -3154,4 +3221,152 @@ img {
     max-width: 180px;
     margin: 0 auto;
   }
+}
+
+/* =========================
+   PARTICIPATE FORM
+   ========================= */
+
+.pf-section {
+  padding: 0 5vw 10vw;
+  background: var(--paper);
+}
+
+.pf-form {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.pf-intro-list {
+  max-width: 640px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pf-intro-list li {
+  padding-left: 22px;
+  position: relative;
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.5;
+  color: #4d4750;
+}
+
+.pf-intro-list li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.pf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.pf-field input[type="text"],
+.pf-field input[type="url"],
+.pf-field input[type="date"],
+.pf-field input[type="file"],
+.pf-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 12px 14px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+}
+
+.pf-field textarea {
+  resize: vertical;
+}
+
+.pf-field input:focus,
+.pf-field textarea:focus {
+  border-color: var(--purple);
+}
+
+.pf-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.pf-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.pf-checkbox input {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--purple);
+  flex-shrink: 0;
+}
+
+.pf-error {
+  margin: 0;
+  font-size: 14px;
+  color: #b3261e;
+}
+
+.pf-form .hero-button {
+  align-self: flex-start;
+  margin-top: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.pf-form .hero-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pf-success {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.pf-success h2 {
+  margin: 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: var(--purple-dark);
+}
+
+.pf-success p {
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--muted);
 }

@@ -4,6 +4,7 @@ import SiteHeader from "@/app/components/SiteHeader"
 import SiteFooter from "@/app/components/SiteFooter"
 import HeroCarousel from "@/app/components/HeroCarousel"
 import DidYouKnow from "@/app/components/DidYouKnow"
+import CommunityTweets from "@/app/components/CommunityTweets"
 import { stories } from "@/data/stories"
 
 const CONTRIBUTION_THEMES = [
@@ -139,25 +140,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="featured-grid">
-          {COMMUNITY_POSTS.map((post) => (
-            <div key={post.id} className="featured-card tweet-card">
-              <div className="featured-image">
-                <Image
-                  src={`/wop/tweets/tweet-${post.id}.png`}
-                  alt={post.alt}
-                  width={1080}
-                  height={1350}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        <CommunityTweets posts={COMMUNITY_POSTS} />
 
         <div className="community-cta">
-          <button type="button" className="btn-outline">
+          <Link href="/participate" className="btn-outline">
             Participate in discussion
-          </button>
+          </Link>
         </div>
       </section>
 
