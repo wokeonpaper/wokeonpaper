@@ -3,6 +3,7 @@ import Link from "next/link"
 import SiteHeader from "@/app/components/SiteHeader"
 import SiteFooter from "@/app/components/SiteFooter"
 import HeroCarousel from "@/app/components/HeroCarousel"
+import DidYouKnow from "@/app/components/DidYouKnow"
 import { stories } from "@/data/stories"
 
 export default function Home() {
@@ -86,6 +87,8 @@ export default function Home() {
         </div>
         <p className="stats-source">Source: NGO Darpan, India&apos;s NGO registration portal.</p>
       </section>
+
+      <DidYouKnow />
 
       <section className="fc-promo">
         <div className="fc-promo-inner">
@@ -233,7 +236,7 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <p className="eyebrow">LONG-FORM</p>
-            <h2>Stories worth sitting with.</h2>
+            <h2>Hot takes on power, politics, and work culture of nonprofits.</h2>
           </div>
 
           <Link href="/stories">See all →</Link>

@@ -1530,6 +1530,120 @@ img {
 }
 
 /* =========================
+   DID YOU KNOW (rotating stats)
+   ========================= */
+
+.dyk-section {
+  padding: 4vw 5vw 6vw;
+  background: var(--paper);
+}
+
+.dyk-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--purple);
+  color: white;
+  border-radius: 20px;
+  padding: 52px 60px;
+  box-shadow: 0 20px 60px rgba(50, 22, 63, 0.2);
+}
+
+.dyk-kicker {
+  margin: 0 0 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.dyk-content {
+  min-height: 168px;
+}
+
+.dyk-headline {
+  margin: 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: clamp(30px, 4.2vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--yellow);
+}
+
+.dyk-statement {
+  margin: 16px 0 0;
+  max-width: 680px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #ede2f2;
+}
+
+.dyk-source {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: #b79ec4;
+}
+
+.dyk-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.dyk-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dyk-dot:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.dyk-dot.active {
+  background: var(--yellow);
+  transform: scale(1.15);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dyk-content {
+    animation: dykFadeIn 0.5s ease;
+  }
+}
+
+@keyframes dykFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .dyk-card {
+    padding: 36px 26px;
+  }
+  .dyk-content {
+    min-height: 0;
+  }
+  .dyk-headline {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+  .dyk-statement {
+    font-size: 16px;
+  }
+}
+
+/* =========================
    STORIES PAGE
    ========================= */
 
