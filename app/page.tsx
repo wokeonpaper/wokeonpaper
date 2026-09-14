@@ -29,6 +29,14 @@ const CONTRIBUTION_THEMES = [
   },
 ]
 
+const COMMUNITY_POSTS = [
+  { id: 1, alt: "Post by Siddharth Shankar (@bysidart) on the social sector's silence on the climate and water crisis" },
+  { id: 2, alt: "Post by Social Sector Majdoor Union (@wokeonpaper) on new FCRA regulations for NGOs" },
+  { id: 3, alt: "Post by Harish Hande (@harishhande) comparing NGO impact measurement to garbage theory" },
+  { id: 4, alt: "Post by Social Sector Majdoor Union (@wokeonpaper) on CSR jargon" },
+  { id: 5, alt: "Post by Social Sector Majdoor Union (@wokeonpaper) on inequality within the social sector" },
+]
+
 export default function Home() {
   return (
     <main>
@@ -122,6 +130,36 @@ export default function Home() {
       </section>
 
       <DidYouKnow />
+
+      <section className="featured-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">COMMUNITY</p>
+            <h2>What the community is talking about.</h2>
+          </div>
+        </div>
+
+        <div className="featured-grid">
+          {COMMUNITY_POSTS.map((post) => (
+            <div key={post.id} className="featured-card tweet-card">
+              <div className="featured-image">
+                <Image
+                  src={`/wop/tweets/tweet-${post.id}.png`}
+                  alt={post.alt}
+                  width={1080}
+                  height={1350}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="community-cta">
+          <button type="button" className="btn-outline">
+            Participate in discussion
+          </button>
+        </div>
+      </section>
 
       <section className="fc-promo">
         <div className="fc-promo-inner">
