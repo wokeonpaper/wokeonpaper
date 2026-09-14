@@ -6,6 +6,29 @@ import HeroCarousel from "@/app/components/HeroCarousel"
 import DidYouKnow from "@/app/components/DidYouKnow"
 import { stories } from "@/data/stories"
 
+const CONTRIBUTION_THEMES = [
+  {
+    label: "Work Culture",
+    copy: "The things we call “part of the job” that probably shouldn't be.",
+  },
+  {
+    label: "Pay & Parity",
+    copy: "Who gets paid what, who decides and why is everyone so secretive about it?",
+  },
+  {
+    label: "Power & Governance",
+    copy: "Who really gets to make the decisions?",
+  },
+  {
+    label: "Impact & Funding",
+    copy: "When the money shapes the work, who gets to define impact?",
+  },
+  {
+    label: "Values & Contradictions",
+    copy: "Tell us about the gap between what the sector says and what it does.",
+  },
+]
+
 export default function Home() {
   return (
     <main>
@@ -295,14 +318,47 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="archive-cta">
-        <p className="eyebrow">THE FULL ARCHIVE</p>
+      <section className="contribute-section">
+        <p className="eyebrow">HAVE SOMETHING TO SAY?</p>
 
-        <h2>Read something. Get annoyed. Think about it.</h2>
+        <h2>
+          Got a story the sector would rather not hear?
+          <br />
+          We probably want to hear it.
+        </h2>
 
-        <Link href="/memes" className="hero-button">
-          Enter the archive →
-        </Link>
+        <p className="contribute-supporting">
+          Work culture horror story? A pay gap that makes no sense? A brilliant idea that
+          deserves more attention? Send it our way. We&apos;re always looking for stories,
+          experiences and questions that make the social sector look in the mirror.
+        </p>
+
+        <div className="contribute-actions">
+          <a
+            href="mailto:wokeonpaper@gmail.com?subject=Contribution%20to%20Woke%20on%20Paper"
+            className="hero-button"
+          >
+            Contribute to Woke on Paper →
+          </a>
+          <Link href="/stories" className="btn-outline">
+            Stories
+          </Link>
+        </div>
+
+        <div className="contribute-grid">
+          {CONTRIBUTION_THEMES.map((theme) => (
+            <a
+              key={theme.label}
+              href={`mailto:wokeonpaper@gmail.com?subject=${encodeURIComponent(
+                `Story idea: ${theme.label}`
+              )}`}
+              className="contribute-box"
+            >
+              <h3>{theme.label}</h3>
+              <p>{theme.copy}</p>
+            </a>
+          ))}
+        </div>
       </section>
 
       <SiteFooter />

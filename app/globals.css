@@ -1113,23 +1113,109 @@ img {
    ARCHIVE CTA
    ========================= */
 
-.archive-cta {
-  padding: 10vw 5vw;
+.contribute-section {
+  padding: 7vw 5vw 8vw;
   text-align: center;
   background: var(--lilac);
 }
 
-.archive-cta h2 {
-  max-width: 900px;
+.contribute-section h2 {
+  max-width: 780px;
   margin: 18px auto 0;
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: clamp(34px, 5vw, 68px);
-  line-height: 1.05;
-  letter-spacing: -0.05em;
+  font-size: clamp(32px, 4.4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--purple-dark);
 }
 
-.archive-cta .hero-button {
+.contribute-supporting {
+  max-width: 640px;
+  margin: 22px auto 0;
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.55;
+  color: #4d4750;
+}
+
+.contribute-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-top: 36px;
+}
+
+.contribute-actions .hero-button {
+  margin-top: 0;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 2px solid var(--purple-dark);
+  color: var(--purple-dark);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: var(--purple-dark);
+  color: white;
+}
+
+.contribute-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 52px auto 0;
+  text-align: left;
+}
+
+.contribute-box {
+  display: block;
+  padding: 26px 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.contribute-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--purple);
+  box-shadow: 6px 6px 0 var(--purple);
+}
+
+.contribute-box h3 {
+  margin: 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--purple);
+}
+
+.contribute-box p {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+@media (max-width: 1000px) {
+  .contribute-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .contribute-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================
@@ -1554,15 +1640,16 @@ img {
 }
 
 .dyk-content {
-  min-height: 168px;
+  min-height: 260px;
 }
 
 .dyk-headline {
   margin: 0;
+  max-width: 780px;
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: clamp(30px, 4.2vw, 48px);
+  font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--yellow);
 }

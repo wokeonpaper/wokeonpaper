@@ -10,40 +10,40 @@ type Stat = {
 
 const STATS: Stat[] = [
   {
-    headline: "₹34,909 crore",
+    headline: "83% of nonprofits struggle to get their real costs funded",
     statement:
-      "Companies in India spent ₹34,909 crore on CSR in 2023–24, taking five-year CSR spending to more than ₹1.44 lakh crore.",
-    source: "Ministry of Corporate Affairs, Government of India, 2026.",
+      "83% of NGOs surveyed said they struggle to secure funding for indirect costs such as HR, finance, technology, communications and other essential organisational functions.",
+    source: "The Bridgespan Group, Building Strong, Resilient NGOs in India, 2021.",
   },
   {
-    headline: "50% of CSR implementation",
+    headline: "Only 18% of nonprofits say they invest enough in organisational development",
     statement:
-      "About half of CSR implementation in India happens through partnerships with nonprofit organisations.",
-    source: "Economic Survey 2023–24, Government of India.",
+      "Only 18% of NGOs surveyed said they invest adequately in organisational development, including leadership, talent, strategy, technology and organisational capacity.",
+    source: "The Bridgespan Group, Building Strong, Resilient NGOs in India, 2021.",
   },
   {
-    headline: "2% → 17%",
+    headline: "90% of nonprofits say funding is their biggest challenge",
     statement:
-      "Public sector companies make up about 2% of companies under the CSR mandate, but contribute almost 17% of total CSR spending.",
-    source: "Economic Survey 2023–24, Government of India.",
+      "90% of nonprofits surveyed identified funding and financial sustainability as their primary challenge, while 68% reported a funding deficit in FY 2024–25.",
+    source: "Dasra, India Nonprofit Report 2026.",
   },
   {
-    headline: "70%+ of CSR spending",
+    headline: "60% of large nonprofits have no marginalised representation in leadership",
     statement:
-      "More than three quarters of CSR spending goes to just four areas: education, healthcare and sanitation, rural development, and environment and conservation.",
-    source: "Economic Survey 2023–24, Government of India.",
+      "Around 60% of large and very large nonprofits surveyed reported having no leadership representation from any marginalised community.",
+    source: "Dasra, India Nonprofit Report 2026.",
   },
   {
-    headline: "₹1.53 lakh crore",
+    headline: "75% of nonprofits say they are working towards systems change",
     statement:
-      "Companies spent ₹1.53 lakh crore on CSR between 2014 and 2022, with more than half of that spent in just the final three years.",
-    source: "Economic Survey 2023–24, Government of India.",
+      "Three quarters of nonprofits surveyed say they work towards systems change, while 64% engage in narrative building and 59% in meaningful collaborative action.",
+    source: "Dasra, India Nonprofit Report 2026.",
   },
   {
-    headline: "5 lakh+ NPOs",
+    headline: "73% of nonprofits have no corpus fund",
     statement:
-      "More than 5 lakh nonprofits have registered on the Government's NGO Darpan portal.",
-    source: "NITI Aayog Annual Report 2025–26.",
+      "Nearly three quarters of nonprofits surveyed reported having no corpus fund, making it harder for organisations to build the financial resilience needed for long-term work.",
+    source: "Dasra, India Nonprofit Report 2026.",
   },
 ]
 
