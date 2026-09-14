@@ -6,7 +6,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-brand-col">
         <Image
-          src="/wokeonpaper/wop/logo.png"
+          src="/wop/logo.png"
           alt="WokeOnPaper"
           width={72}
           height={72}

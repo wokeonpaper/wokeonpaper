@@ -2,7 +2,7 @@
 
 Nonprofit satire media for people who work in the social sector. Memes, long-form stories, and commentary on power, funding and work culture — nudging the sector towards being more honest, participatory and democratic.
 
-- **Live site:** https://wokeonpaper.github.io/wokeonpaper/
+- **Live site:** https://wokeonpaper.in
 - **Instagram:** https://www.instagram.com/wokeonpaper/
 
 ---
@@ -13,7 +13,7 @@ Nonprofit satire media for people who work in the social sector. Memes, long-for
 - **React 19** + **TypeScript**
 - **Tailwind CSS 4** (available) + a custom stylesheet in `app/globals.css`
 - **Static export** (`output: "export"`) — the site builds to plain HTML/CSS/JS
-- **Deployed to GitHub Pages** via GitHub Actions, served under the `/wokeonpaper` base path
+- **Deployed to GitHub Pages** via GitHub Actions, served at the custom domain `wokeonpaper.in`
 
 ---
 
@@ -26,9 +26,7 @@ npm install        # first time only — installs dependencies
 npm run dev        # starts the local dev server
 ```
 
-Then open **http://localhost:3000/wokeonpaper** in your browser.
-
-> Note: the site lives under `/wokeonpaper` (not the root `/`) because it deploys to GitHub Pages at a subpath. Always include `/wokeonpaper` in local URLs.
+Then open **http://localhost:3000** in your browser.
 
 Other commands:
 
@@ -61,7 +59,7 @@ npm run lint       # checks code style
   ],
   category: "Work Culture",
   tags: ["tag1", "tag2"],
-  image: "/wokeonpaper/memes/51.png"
+  image: "/memes/51.png"
 }
 ```
 
@@ -81,8 +79,8 @@ The homepage, archive, filters and individual page update automatically.
   title: "Your Story Title",
   dek: "A one-line description shown under the title.",
   tag: "Category Name",
-  cover: "/wokeonpaper/stories/your-cover.png",
-  images: ["/wokeonpaper/stories/your-support.png"],   // optional
+  cover: "/stories/your-cover.png",
+  images: ["/stories/your-support.png"],   // optional
   author: "Social Sector Majdoor Union",
   authorHandle: "wokeonpaper",
   readTime: "6 min read",
@@ -92,7 +90,7 @@ The homepage, archive, filters and individual page update automatically.
       paragraphs: ["Paragraph one.", "Paragraph two."],
       quote: "An optional pull-quote for a strong statement.",   // optional
       quoteAttribution: "Name, role",                            // optional
-      figure: "/wokeonpaper/stories/your-support.png",           // optional inline image
+      figure: "/stories/your-support.png",           // optional inline image
       figureCaption: "Optional caption for the figure."          // optional
     }
   ]

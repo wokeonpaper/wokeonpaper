@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wokeonpaper.com"),
+  metadataBase: new URL("https://wokeonpaper.in"),
   title: {
     default: "WokeOnPaper — Nonprofit Satire Media",
     template: "%s | WokeOnPaper",
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     title: "WokeOnPaper — Nonprofit Satire Media",
     description:
       "WokeOnPaper is a satirical media space for people who work in the social sector.",
-    url: "https://wokeonpaper.com",
+    url: "https://wokeonpaper.in",
     siteName: "WokeOnPaper",
     images: [
       {
-        url: "/wokeonpaper/wop/logo.png",
+        url: "/wop/logo.png",
         width: 800,
         height: 800,
       },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "WokeOnPaper — Nonprofit Satire Media",
     description:
       "WokeOnPaper is a satirical media space for people who work in the social sector.",
-    images: ["/wokeonpaper/wop/logo.png"],
+    images: ["/wop/logo.png"],
   },
 };
 

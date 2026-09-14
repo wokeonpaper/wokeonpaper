@@ -36,7 +36,7 @@ export default function Home() {
       <section className="community-stats">
         <div className="community-stats-image">
           <Image
-            src="/wokeonpaper/wop/social-sector-majdoor.png"
+            src="/wop/social-sector-majdoor.png"
             alt="Social Sector Majdoor — raised fists"
             width={1080}
             height={1350}
@@ -104,7 +104,7 @@ export default function Home() {
             <div className="fc-promo-badge-visual">
               <div className="fc-promo-badge-circle" />
               <Image
-                src="/wokeonpaper/wop/frustration-guy.png"
+                src="/wop/frustration-guy.png"
                 alt=""
                 width={360}
                 height={360}
@@ -131,7 +131,7 @@ export default function Home() {
           <Link href="/memes/3" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/memes/3.png"
+                src="/memes/3.png"
                 alt="The theory of change versus the change that actually happens"
                 width={800}
                 height={800}
@@ -150,7 +150,7 @@ export default function Home() {
           <Link href="/memes/24" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/memes/24.png"
+                src="/memes/24.png"
                 alt="The NGO hospital"
                 width={800}
                 height={800}
@@ -170,7 +170,7 @@ export default function Home() {
           <Link href="/memes/38" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/memes/38.png"
+                src="/memes/38.png"
                 alt="Collaboration in the nonprofit sector"
                 width={800}
                 height={800}
@@ -190,7 +190,7 @@ export default function Home() {
           <Link href="/memes/14" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/memes/14.png"
+                src="/memes/14.png"
                 alt="Impact vs Instagram"
                 width={800}
                 height={800}
@@ -210,7 +210,7 @@ export default function Home() {
           <Link href="/memes/43" className="featured-card">
             <div className="featured-image">
               <Image
-                src="/wokeonpaper/memes/43.png"
+                src="/memes/43.png"
                 alt="Authentic stories, carefully edited"
                 width={800}
                 height={800}
@@ -272,13 +272,13 @@ export default function Home() {
 
         <div className="majdoor-fan">
           <Link href="/memes/5" className="fan-card fan-card-1">
-            <Image src="/wokeonpaper/memes/5.png" alt="WokeOnPaper meme" width={500} height={625} />
+            <Image src="/memes/5.png" alt="WokeOnPaper meme" width={500} height={625} />
           </Link>
           <Link href="/memes/20" className="fan-card fan-card-2">
-            <Image src="/wokeonpaper/memes/20.png" alt="WokeOnPaper meme" width={500} height={625} />
+            <Image src="/memes/20.png" alt="WokeOnPaper meme" width={500} height={625} />
           </Link>
           <Link href="/memes/30" className="fan-card fan-card-3">
-            <Image src="/wokeonpaper/memes/30.png" alt="A Bad NGO Worker" width={500} height={625} />
+            <Image src="/memes/30.png" alt="A Bad NGO Worker" width={500} height={625} />
           </Link>
         </div>
       </section>

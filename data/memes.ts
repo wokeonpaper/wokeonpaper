@@ -20,7 +20,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["consulting", "groundwork", "health", "development"],
-    image: "/wokeonpaper/memes/1.png"
+    image: "/memes/1.png"
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["fellowships", "careers", "jobs", "social sector"],
-    image: "/wokeonpaper/memes/2.png"
+    image: "/memes/2.png"
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ export const memes: Meme[] = [
     ],
     category: "Impact & Evaluation",
     tags: ["theory of change", "impact", "evaluation", "frameworks"],
-    image: "/wokeonpaper/memes/3.png"
+    image: "/memes/3.png"
   },
   {
     id: 4,
@@ -59,7 +59,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["employee welfare", "workplace", "policy", "nonprofits"],
-    image: "/wokeonpaper/memes/4.png"
+    image: "/memes/4.png"
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ export const memes: Meme[] = [
     ],
     category: "Rights & Justice",
     tags: ["gender", "trans rights", "inclusion", "equality"],
-    image: "/wokeonpaper/memes/5.png"
+    image: "/memes/5.png"
   },
   {
     id: 6,
@@ -85,7 +85,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["wages", "job security", "labour", "nonprofits"],
-    image: "/wokeonpaper/memes/6.png"
+    image: "/memes/6.png"
   },
   {
     id: 7,
@@ -98,7 +98,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["funding", "donors", "inequality", "education"],
-    image: "/wokeonpaper/memes/7.png"
+    image: "/memes/7.png"
   },
   {
     id: 8,
@@ -111,7 +111,7 @@ export const memes: Meme[] = [
     ],
     category: "CSR & Philanthropy",
     tags: ["CSR", "branding", "impact", "groundwork"],
-    image: "/wokeonpaper/memes/8.png"
+    image: "/memes/8.png"
   },
   {
     id: 9,
@@ -124,7 +124,7 @@ export const memes: Meme[] = [
     ],
     category: "Consulting",
     tags: ["consulting", "government schools", "expertise", "fieldwork"],
-    image: "/wokeonpaper/memes/9.png"
+    image: "/memes/9.png"
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const memes: Meme[] = [
     ],
     category: "CSR & Philanthropy",
     tags: ["CSR", "schools", "water", "impact washing"],
-    image: "/wokeonpaper/memes/10.png"
+    image: "/memes/10.png"
   },
   {
     id: 11,
@@ -150,7 +150,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["internships", "unpaid work", "careers", "labour"],
-    image: "/wokeonpaper/memes/11.png"
+    image: "/memes/11.png"
   },
   {
     id: 12,
@@ -163,7 +163,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["grants", "proposal writing", "funding", "systems change"],
-    image: "/wokeonpaper/memes/12.png"
+    image: "/memes/12.png"
   },
   {
     id: 13,
@@ -176,7 +176,7 @@ export const memes: Meme[] = [
     ],
     category: "Power & Politics",
     tags: ["corporates", "power", "CSR", "accountability"],
-    image: "/wokeonpaper/memes/13.png"
+    image: "/memes/13.png"
   },
   {
     id: 14,
@@ -189,7 +189,7 @@ export const memes: Meme[] = [
     ],
     category: "Communications",
     tags: ["comms", "social media", "impact", "storytelling"],
-    image: "/wokeonpaper/memes/14.png"
+    image: "/memes/14.png"
   },
   {
     id: 15,
@@ -202,7 +202,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["fellowships", "leadership", "branding", "nonprofits"],
-    image: "/wokeonpaper/memes/15.png"
+    image: "/memes/15.png"
   },
   {
     id: 16,
@@ -215,7 +215,7 @@ export const memes: Meme[] = [
     ],
     category: "Sector Language",
     tags: ["jargon", "change", "branding", "nonprofit language"],
-    image: "/wokeonpaper/memes/16.png"
+    image: "/memes/16.png"
   },
   {
     id: 17,
@@ -228,7 +228,7 @@ export const memes: Meme[] = [
     ],
     category: "Sector Language",
     tags: ["community", "participation", "power", "jargon"],
-    image: "/wokeonpaper/memes/17.png"
+    image: "/memes/17.png"
   },
   {
     id: 18,
@@ -241,7 +241,7 @@ export const memes: Meme[] = [
     ],
     category: "Power & Knowledge",
     tags: ["research", "knowledge", "communities", "Global South"],
-    image: "/wokeonpaper/memes/18.png"
+    image: "/memes/18.png"
   },
   {
     id: 19,
@@ -254,7 +254,7 @@ export const memes: Meme[] = [
     ],
     category: "Power & Politics",
     tags: ["government", "corporates", "NGOs", "CSR"],
-    image: "/wokeonpaper/memes/19.png"
+    image: "/memes/19.png"
   },
   {
     id: 20,
@@ -267,7 +267,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["jobs", "salary", "transparency", "workplace"],
-    image: "/wokeonpaper/memes/20.png"
+    image: "/memes/20.png"
   },
   {
     id: 21,
@@ -280,7 +280,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["philanthropy", "funding", "power", "change"],
-    image: "/wokeonpaper/memes/21.png"
+    image: "/memes/21.png"
   },
   {
     id: 22,
@@ -293,7 +293,7 @@ export const memes: Meme[] = [
     ],
     category: "Accountability",
     tags: ["accountability", "funders", "communities", "nonprofits"],
-    image: "/wokeonpaper/memes/22.png"
+    image: "/memes/22.png"
   },
   {
     id: 23,
@@ -306,7 +306,7 @@ export const memes: Meme[] = [
     ],
     category: "CSR & Philanthropy",
     tags: ["CSR", "visibility", "impact", "philanthropy"],
-    image: "/wokeonpaper/memes/23.png"
+    image: "/memes/23.png"
   },
   {
     id: 24,
@@ -319,7 +319,7 @@ export const memes: Meme[] = [
     ],
     category: "Public Systems",
     tags: ["healthcare", "NGOs", "crowdfunding", "public systems"],
-    image: "/wokeonpaper/memes/24.png"
+    image: "/memes/24.png"
   },
   {
     id: 25,
@@ -332,7 +332,7 @@ export const memes: Meme[] = [
     ],
     category: "Power & Knowledge",
     tags: ["knowledge", "education", "expertise", "power"],
-    image: "/wokeonpaper/memes/25.png"
+    image: "/memes/25.png"
   },
   {
     id: 26,
@@ -345,7 +345,7 @@ export const memes: Meme[] = [
     ],
     category: "Power & Politics",
     tags: ["public policy", "MGNREGA", "branding", "government"],
-    image: "/wokeonpaper/memes/26.png"
+    image: "/memes/26.png"
   },
   {
     id: 27,
@@ -358,7 +358,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["grants", "proposal writing", "funding", "groundwork"],
-    image: "/wokeonpaper/memes/27.png"
+    image: "/memes/27.png"
   },
   {
     id: 28,
@@ -371,7 +371,7 @@ export const memes: Meme[] = [
     ],
     category: "Power & Politics",
     tags: ["government", "politics", "accountability", "public policy"],
-    image: "/wokeonpaper/memes/28.png"
+    image: "/memes/28.png"
   },
   {
     id: 29,
@@ -384,7 +384,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["funding", "measurement", "caste", "inequality"],
-    image: "/wokeonpaper/memes/29.png"
+    image: "/memes/29.png"
   },
   {
     id: 30,
@@ -397,7 +397,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["labour", "wages", "unions", "NGO workers"],
-    image: "/wokeonpaper/memes/30.png"
+    image: "/memes/30.png"
   },
   {
     id: 31,
@@ -410,7 +410,7 @@ export const memes: Meme[] = [
     ],
     category: "Rights & Justice",
     tags: ["citizenship", "Constitution", "democracy", "accountability"],
-    image: "/wokeonpaper/memes/31.png"
+    image: "/memes/31.png"
   },
   {
     id: 32,
@@ -423,7 +423,7 @@ export const memes: Meme[] = [
     ],
     category: "Sector Language",
     tags: ["community", "participation", "power", "jargon"],
-    image: "/wokeonpaper/memes/32.png"
+    image: "/memes/32.png"
   },
   {
     id: 33,
@@ -436,7 +436,7 @@ export const memes: Meme[] = [
     ],
     category: "Sector Language",
     tags: ["systems change", "jargon", "strategy", "development"],
-    image: "/wokeonpaper/memes/33.png"
+    image: "/memes/33.png"
   },
   {
     id: 34,
@@ -449,7 +449,7 @@ export const memes: Meme[] = [
     ],
     category: "Sector Language",
     tags: ["sustainability", "jargon", "impact", "funding"],
-    image: "/wokeonpaper/memes/34.png"
+    image: "/memes/34.png"
   },
   {
     id: 35,
@@ -462,7 +462,7 @@ export const memes: Meme[] = [
     ],
     category: "Communications",
     tags: ["comms", "social media", "nonprofits", "branding"],
-    image: "/wokeonpaper/memes/35.png"
+    image: "/memes/35.png"
   },
   {
     id: 36,
@@ -475,7 +475,7 @@ export const memes: Meme[] = [
     ],
     category: "Work Culture",
     tags: ["careers", "experience", "workplace", "leadership"],
-    image: "/wokeonpaper/memes/36.png"
+    image: "/memes/36.png"
   },
   {
     id: 37,
@@ -488,7 +488,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["CSR", "grassroots", "funding", "regional inequality"],
-    image: "/wokeonpaper/memes/37.png"
+    image: "/memes/37.png"
   },
   {
     id: 38,
@@ -501,7 +501,7 @@ export const memes: Meme[] = [
     ],
     category: "Sector Culture",
     tags: ["collaboration", "partnerships", "ecosystems", "NGOs"],
-    image: "/wokeonpaper/memes/38.png"
+    image: "/memes/38.png"
   },
   {
     id: 39,
@@ -514,7 +514,7 @@ export const memes: Meme[] = [
     ],
     category: "Sector Language",
     tags: ["jargon", "funders", "communication", "clarity"],
-    image: "/wokeonpaper/memes/39.png"
+    image: "/memes/39.png"
   },
   {
     id: 40,
@@ -527,7 +527,7 @@ export const memes: Meme[] = [
     ],
     category: "Public Systems",
     tags: ["teachers", "elections", "education", "government"],
-    image: "/wokeonpaper/memes/40.png"
+    image: "/memes/40.png"
   },
   {
     id: 41,
@@ -540,7 +540,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["funders", "implementation", "NGOs", "power"],
-    image: "/wokeonpaper/memes/41.png"
+    image: "/memes/41.png"
   },
   {
     id: 42,
@@ -553,7 +553,7 @@ export const memes: Meme[] = [
     ],
     category: "Rights & Justice",
     tags: ["caste", "equity", "education", "accountability"],
-    image: "/wokeonpaper/memes/42.png"
+    image: "/memes/42.png"
   },
   {
     id: 43,
@@ -566,7 +566,7 @@ export const memes: Meme[] = [
     ],
     category: "Communications",
     tags: ["storytelling", "comms", "communities", "impact"],
-    image: "/wokeonpaper/memes/43.png"
+    image: "/memes/43.png"
   },
   {
     id: 44,
@@ -579,7 +579,7 @@ export const memes: Meme[] = [
     ],
     category: "Rights & Justice",
     tags: ["trans rights", "dignity", "law", "rights"],
-    image: "/wokeonpaper/memes/44.png"
+    image: "/memes/44.png"
   },
   {
     id: 45,
@@ -592,7 +592,7 @@ export const memes: Meme[] = [
     ],
     category: "Rights & Justice",
     tags: ["civil society", "foreign funding", "democracy", "rights"],
-    image: "/wokeonpaper/memes/45.png"
+    image: "/memes/45.png"
   },
   {
     id: 46,
@@ -605,7 +605,7 @@ export const memes: Meme[] = [
     ],
     category: "Technology & Society",
     tags: ["AI", "safety", "children", "philanthropy"],
-    image: "/wokeonpaper/memes/46.png"
+    image: "/memes/46.png"
   },
   {
     id: 47,
@@ -618,7 +618,7 @@ export const memes: Meme[] = [
     ],
     category: "Culture & Society",
     tags: ["humour", "prejudice", "misogyny", "discrimination"],
-    image: "/wokeonpaper/memes/47.png"
+    image: "/memes/47.png"
   },
   {
     id: 48,
@@ -631,7 +631,7 @@ export const memes: Meme[] = [
     ],
     category: "Funding",
     tags: ["ecosystems", "partnerships", "grassroots", "power"],
-    image: "/wokeonpaper/memes/48.png"
+    image: "/memes/48.png"
   },
   {
     id: 49,
@@ -644,7 +644,7 @@ export const memes: Meme[] = [
     ],
     category: "Technology & Environment",
     tags: ["AI", "water", "data centres", "CSR"],
-    image: "/wokeonpaper/memes/49.png"
+    image: "/memes/49.png"
   },
   {
     id: 50,
@@ -657,6 +657,6 @@ export const memes: Meme[] = [
     ],
     category: "Community & Participation",
     tags: ["community", "participation", "power", "funding"],
-    image: "/wokeonpaper/memes/50.png"
+    image: "/memes/50.png"
   }
 ]

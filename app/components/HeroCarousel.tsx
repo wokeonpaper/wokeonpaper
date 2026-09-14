@@ -21,7 +21,7 @@ export default function HeroCarousel() {
         {MEME_IDS.map((id, i) => (
           <Image
             key={id}
-            src={`/wokeonpaper/memes/${id}.png`}
+            src={`/memes/${id}.png`}
             alt="WokeOnPaper meme"
             width={900}
             height={1125}

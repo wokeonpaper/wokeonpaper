@@ -11,7 +11,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <Link href="/" className="brand" onClick={() => setOpen(false)}>
         <Image
-          src="/wokeonpaper/wop/logo.png"
+          src="/wop/logo.png"
           alt="WokeOnPaper"
           width={46}
           height={46}
