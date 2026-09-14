@@ -229,7 +229,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="featured-section home-stories-section">
+      <section className="featured-section">
         <div className="section-heading">
           <div>
             <p className="eyebrow">LONG-FORM</p>
@@ -239,17 +239,16 @@ export default function Home() {
           <Link href="/stories">See all →</Link>
         </div>
 
-        <div className="story-nav-grid home-story-grid">
+        <div className="featured-grid">
           {stories.slice(0, 5).map((story) => (
-            <Link key={story.slug} href={`/stories/${story.slug}`} className="story-preview-card">
-              <div className="story-preview-image">
-                <Image src={story.cover} alt={story.title} width={800} height={1000} />
+            <Link key={story.slug} href={`/stories/${story.slug}`} className="featured-card">
+              <div className="featured-image">
+                <Image src={story.cover} alt={story.title} width={800} height={800} />
               </div>
-              <div className="story-preview-copy">
-                <span className="story-tag">{story.tag}</span>
-                <h2>{story.title}</h2>
+              <div className="featured-copy">
+                <span>{story.tag.toUpperCase()}</span>
+                <h3>{story.title}</h3>
                 <p>{story.dek}</p>
-                <span className="read-meme">Read the story →</span>
               </div>
             </Link>
           ))}

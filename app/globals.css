@@ -1542,18 +1542,6 @@ img {
   gap: 24px;
 }
 
-.home-stories-section .home-story-grid {
-  max-width: none;
-  padding: 45px 0 0;
-}
-
-@media (max-width: 900px) {
-  .home-stories-section .home-story-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .home-stories-section .home-story-grid { grid-template-columns: 1fr; }
-}
-
 .story-preview-card {
   display: block;
   text-decoration: none;
