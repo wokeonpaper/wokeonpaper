@@ -33,6 +33,37 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="community-stats">
+        <div className="community-stats-image">
+          <Image
+            src="/wokeonpaper/wop/social-sector-majdoor.png"
+            alt="Social Sector Majdoor — raised fists"
+            width={1080}
+            height={1350}
+          />
+        </div>
+
+        <div className="community-stats-copy">
+          <h2>
+            The social sector is talking. We&apos;re listening.
+          </h2>
+          <div className="community-stats-grid">
+            <div className="community-stat">
+              <span className="community-stat-number">10,000+</span>
+              <span className="community-stat-label">
+                people have joined the conversation on Instagram
+              </span>
+            </div>
+            <div className="community-stat">
+              <span className="community-stat-number">2 lakh+</span>
+              <span className="community-stat-label">
+                people engaging with WokeOnPaper every month
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="sector-stats">
         <p className="eyebrow">THE NONPROFIT LANDSCAPE IN INDIA</p>
         <h2>Who counts as a nonprofit, and how many are there?</h2>
