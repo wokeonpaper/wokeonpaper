@@ -65,27 +65,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="sector-stats">
-        <p className="eyebrow">THE NONPROFIT LANDSCAPE IN INDIA</p>
-        <h2>Who counts as a nonprofit, and how many are there?</h2>
-        <div className="stats-grid">
-          <div className="stat-card">
-            <span className="stat-number">3,04,666</span>
-            <span className="stat-label">Trusts</span>
-            <span className="stat-percent">49.84%</span>
+      <section className="wwd-section">
+        <p className="eyebrow">WHAT WOKE ON PAPER DOES</p>
+        <h2 className="wwd-heading">We love the sector. That&apos;s why we keep poking it.</h2>
+        <p className="wwd-supporting">
+          Woke on Paper uses satire, stories, questions and conversations to hold up a mirror to
+          India&apos;s social sector and ask whether we are practising the values we preach.
+        </p>
+
+        <div className="wwd-grid">
+          <div className="wwd-box">
+            <h3>Pinch the sector</h3>
+            <p>
+              Using satire, humour and uncomfortable questions to poke at the contradictions of a
+              sector that promises so much, while occasionally forgetting to look in the mirror.
+            </p>
           </div>
-          <div className="stat-card">
-            <span className="stat-number">2,50,726</span>
-            <span className="stat-label">Societies</span>
-            <span className="stat-percent">41.02%</span>
+          <div className="wwd-box">
+            <h3>Change how we work</h3>
+            <p>
+              Pushing the sector to take work culture, equity, pay, power and wellbeing as
+              seriously as the change it wants to create outside its walls.
+            </p>
           </div>
-          <div className="stat-card">
-            <span className="stat-number">55,861</span>
-            <span className="stat-label">Section 8 Companies</span>
-            <span className="stat-percent">9.14%</span>
+          <div className="wwd-box">
+            <h3>Change the way change happens</h3>
+            <p>
+              Making the case for organisations that listen to their own people, advocate for
+              systemic change and stop treating communities as delivery targets.
+            </p>
           </div>
         </div>
-        <p className="stats-source">Source: NGO Darpan, India&apos;s NGO registration portal.</p>
       </section>
 
       <DidYouKnow />
