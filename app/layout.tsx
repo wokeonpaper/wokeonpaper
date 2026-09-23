@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     siteName: "WokeOnPaper",
     images: [
       {
-        url: "/wop/logo.png",
-        width: 800,
-        height: 800,
+        url: "/brand/og-image.png",
+        width: 1200,
+        height: 630,
       },
     ],
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "WokeOnPaper — Nonprofit Satire Media",
     description:
       "WokeOnPaper is a satirical media space for people who work in the social sector.",
-    images: ["/wop/logo.png"],
+    images: ["/brand/og-image.png"],
   },
 };
 

@@ -11,14 +11,13 @@ export default function SiteHeader() {
     <header className="site-header">
       <Link href="/" className="brand" onClick={() => setOpen(false)}>
         <Image
-          src="/wop/logo.png"
+          src="/brand/logo-primary.png"
           alt="WokeOnPaper"
-          width={46}
-          height={46}
+          width={480}
+          height={497}
           className="brand-logo"
           priority
         />
-        <span className="brand-text">WokeOnPaper</span>
       </Link>
 
       <button

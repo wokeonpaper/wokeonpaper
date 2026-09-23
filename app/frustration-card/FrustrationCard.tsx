@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { toPng } from "html-to-image"
 import { jsPDF } from "jspdf"
 import {
@@ -280,7 +281,13 @@ export default function FrustrationCard() {
             style={{ transform: `scale(${cardScale})` }}
           >
             <div className="fc-card-top">
-              <span>WokeOnPaper</span>
+              <Image
+                src="/brand/logo-reversed.png"
+                alt="WokeOnPaper"
+                width={480}
+                height={497}
+                className="fc-card-logo"
+              />
               <span>THE FRUSTRATION CARD</span>
             </div>
 

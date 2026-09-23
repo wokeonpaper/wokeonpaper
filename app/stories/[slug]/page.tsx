@@ -48,7 +48,7 @@ export default async function StoryPage({ params }: Props) {
           <p className="post-dek">{story.dek}</p>
 
           <div className="post-byline">
-            <Image src="/wop/logo.png" alt="" width={40} height={40} className="byline-avatar" />
+            <Image src="/brand/avatar.png" alt="" width={40} height={40} className="byline-avatar" />
             <div>
               <span className="byline-name">{story.author}</span>
               <span className="byline-meta">@{story.authorHandle} &middot; {story.readTime}</span>
@@ -90,7 +90,7 @@ export default async function StoryPage({ params }: Props) {
 
         <div className="writer-card">
           <div className="writer-card-top">
-            <Image src="/wop/logo.png" alt="" width={52} height={52} className="writer-avatar" />
+            <Image src="/brand/avatar.png" alt="" width={52} height={52} className="writer-avatar" />
             <div className="writer-id">
               <span className="writer-name">
                 {story.author}

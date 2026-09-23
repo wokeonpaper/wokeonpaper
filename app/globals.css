@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
-  --purple: #432052;
+  --purple: #3f1c4e;
   --purple-dark: #32163f;
-  --yellow: #ffdc55;
+  --yellow: #ffde5a;
   --lilac: #f0d9f7;
   --paper: #f7f5ef;
   --white: #ffffff;
@@ -41,7 +41,7 @@ img {
    ========================= */
 
 .site-header {
-  height: 74px;
+  height: 84px;
   padding: 0 5vw;
   display: flex;
   align-items: center;
@@ -59,8 +59,8 @@ img {
 }
 
 .brand img {
-  width: 105px;
-  height: 48px;
+  width: auto;
+  height: 66px;
   object-fit: contain;
 }
 
@@ -688,8 +688,8 @@ img {
   }
 
   .brand img {
-    width: 90px;
-    height: 44px;
+    width: auto;
+    height: 52px;
   }
 
   .instagram-link {
@@ -794,7 +794,7 @@ img {
   font-size: clamp(48px, 7vw, 88px);
   line-height: 0.95;
   letter-spacing: -0.05em;
-  color: #3f1c4e;
+  color: var(--purple);
 }
 
 .memes-intro-text {
@@ -825,7 +825,7 @@ img {
 
 .meme-card:hover {
   transform: translateY(-5px);
-  box-shadow: 8px 8px 0 #3f1c4e;
+  box-shadow: 8px 8px 0 var(--purple);
 }
 
 .meme-card-image {
@@ -850,7 +850,7 @@ img {
   margin-right: 12px;
   font-size: 13px;
   font-weight: 700;
-  color: #3f1c4e;
+  color: var(--purple);
 }
 
 .meme-card-category {
@@ -866,7 +866,7 @@ img {
   font-size: 25px;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: #3f1c4e;
+  color: var(--purple);
 }
 
 .meme-card p {
@@ -879,7 +879,7 @@ img {
 .read-meme {
   font-size: 14px;
   font-weight: 700;
-  color: #3f1c4e;
+  color: var(--purple);
 }
 
 @media (max-width: 800px) {
@@ -932,7 +932,7 @@ img {
   padding: 9px 18px;
   border: 1px solid rgba(63, 28, 78, 0.25);
   background: transparent;
-  color: #3f1c4e;
+  color: var(--purple);
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
@@ -941,7 +941,7 @@ img {
 
 .category-pill.active,
 .category-pill:hover {
-  background: #3f1c4e;
+  background: var(--purple);
   color: white;
 }
 
@@ -1525,27 +1525,6 @@ img {
 }
 
 /* =========================
-   TEXT WORDMARK (logo replacement)
-   ========================= */
-
-.brand-text {
-  font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--purple-dark);
-}
-
-.footer-brand-text {
-  display: block;
-  font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: white;
-}
-
-/* =========================
    NONPROFIT SECTOR STATS
    ========================= */
 
@@ -1961,18 +1940,17 @@ img {
 }
 
 .brand-logo {
-  width: 46px;
-  height: 46px;
   object-fit: contain;
   border-radius: 0;
   background: transparent;
 }
 
 .footer-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: auto;
+  height: 116px;
+  margin-bottom: 24px;
+  border-radius: 0;
+  object-fit: contain;
 }
 
 /* =========================
@@ -2975,10 +2953,16 @@ img {
 .fc-card-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #d8c4e2;
+}
+
+.fc-card-logo {
+  width: auto;
+  height: 104px;
 }
 
 .fc-card-hero { margin-top: 46px; }

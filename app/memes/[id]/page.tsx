@@ -75,7 +75,7 @@ export default async function MemePage({ params }: Props) {
             </div>
 
             <div className="meme-credit-card">
-              <Image src="/wop/logo.png" alt="" width={44} height={44} className="writer-avatar" />
+              <Image src="/brand/avatar.png" alt="" width={44} height={44} className="writer-avatar" />
               <div className="writer-id">
                 <span className="writer-name">
                   Social Sector Majdoor Union

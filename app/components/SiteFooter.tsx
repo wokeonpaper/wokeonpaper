@@ -6,10 +6,10 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-brand-col">
         <Image
-          src="/wop/logo.png"
+          src="/brand/logo-reversed.png"
           alt="WokeOnPaper"
-          width={72}
-          height={72}
+          width={480}
+          height={497}
           className="footer-logo"
         />
         <p>Nonprofit satire media. Serving social sector workers since 2025.</p>
