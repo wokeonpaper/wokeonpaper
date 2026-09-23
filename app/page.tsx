@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import SiteHeader from "@/app/components/SiteHeader"
 import SiteFooter from "@/app/components/SiteFooter"
-import HeroCarousel from "@/app/components/HeroCarousel"
+import HeroFrame from "@/app/components/HeroFrame"
 import DidYouKnow from "@/app/components/DidYouKnow"
 import CommunityTweets from "@/app/components/CommunityTweets"
 import { stories } from "@/data/stories"
@@ -43,26 +43,110 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-            <section className="hero">
+      <section className="hero">
         <div className="hero-copy">
           <h1>
-            Serving nonprofit satire
+            Serving nonprofit{" "}
+            <span className="hero-underline">
+              satire
+              <svg viewBox="0 0 220 26" aria-hidden="true" preserveAspectRatio="none">
+                <path d="M4 17 C 60 6, 150 4, 214 10" />
+                <path d="M30 22 C 90 14, 160 13, 206 18" />
+              </svg>
+            </span>
             <br />
             since 2025.
           </h1>
 
-          <p>
+          <p className="hero-lede">
             An independent satire collective of development practitioners, nudging
             the social sector to laugh at itself, listen better, and do better.
           </p>
 
-          <Link href="/memes" className="hero-button">
-            Explore the memes →
-          </Link>
+          <div className="hero-ctas">
+            <Link href="/memes" className="hero-cta">
+              Explore the memes →
+            </Link>
+            <Link href="/about" className="hero-textlink">
+              Read our story
+            </Link>
+          </div>
+
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <strong>2 lakh+</strong>
+              <span>Monthly reach on Instagram</span>
+            </div>
+            <a
+              href="https://idronline.org/contributor/wokeonpaper/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-stat hero-featured"
+            >
+              <span>Featured on</span>
+              <Image
+                src="/brand/idr-logo.png"
+                alt="India Development Review"
+                width={360}
+                height={298}
+              />
+            </a>
+          </div>
         </div>
 
-        <div className="hero-image">
-          <HeroCarousel />
+        <div className="hero-collage">
+          <div className="hero-blob" aria-hidden="true" />
+          <div className="hero-burst" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <polygon points="100,4 116,52 158,20 146,70 196,66 156,98 196,132 146,128 160,180 116,146 100,196 84,146 40,180 54,128 4,132 44,98 4,66 54,70 42,20 84,52" />
+            </svg>
+          </div>
+
+          <HeroFrame />
+
+          <p className="hero-sticky hero-sticky-left" aria-hidden="true">
+            Same old problems.
+            <br />
+            New jargon.
+            <svg viewBox="0 0 60 50">
+              <path d="M8 4 C 2 24, 18 40, 50 42" />
+              <path d="M40 34 L 51 42 L 40 48" />
+            </svg>
+          </p>
+
+          <p className="hero-scribble hero-scribble-mission" aria-hidden="true">
+            A more honest
+            <br />
+            social sector
+          </p>
+
+          <p className="hero-sticky hero-sticky-cycle" aria-hidden="true">
+            Ideas
+            <br />
+            Funds
+            <br />
+            Impact
+            <br />
+            Audits
+            <br />
+            Repeat
+          </p>
+
+          <p className="hero-sticky hero-sticky-torn" aria-hidden="true">
+            Someone had
+            <br />
+            to say it.
+          </p>
+
+        </div>
+
+        <div className="hero-band">
+          <p className="hero-band-label">We talk about</p>
+          <ul className="hero-band-topics">
+            {CONTRIBUTION_THEMES.map((theme) => (
+              <li key={theme.label}>{theme.label}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -98,36 +182,68 @@ export default function Home() {
       </section>
 
       <section className="wwd-section">
-        <p className="eyebrow">WHAT WOKE ON PAPER DOES</p>
-        <h2 className="wwd-heading">We love the sector. That&apos;s why we keep poking it.</h2>
-        <p className="wwd-supporting">
-          Woke on Paper uses satire, stories, questions and conversations to hold up a mirror to
-          India&apos;s social sector and ask whether we are practising the values we preach.
-        </p>
-
-        <div className="wwd-grid">
-          <div className="wwd-box">
-            <h3>Pinch the sector</h3>
-            <p>
-              Using satire, humour and uncomfortable questions to poke at the contradictions of a
-              sector that promises so much, while occasionally forgetting to look in the mirror.
-            </p>
-          </div>
-          <div className="wwd-box">
-            <h3>Change how we work</h3>
-            <p>
-              Pushing the sector to take work culture, equity, pay, power and wellbeing as
-              seriously as the change it wants to create outside its walls.
-            </p>
-          </div>
-          <div className="wwd-box">
-            <h3>Change the way change happens</h3>
-            <p>
-              Making the case for organisations that listen to their own people, advocate for
-              systemic change and stop treating communities as delivery targets.
-            </p>
-          </div>
+        <div className="wwd-frame">
+          <span className="wwd-fold" aria-hidden="true" />
+          <p className="eyebrow">What Woke On Paper does</p>
+          <h2 className="wwd-heading">
+            We love the sector. That&apos;s why we keep{" "}
+            <span className="scribble-underline">poking it.</span>
+          </h2>
         </div>
+
+        <div className="wwd-intro">
+          <p className="wwd-supporting">
+            Woke on Paper uses satire, stories, questions and conversations to hold up a mirror to
+            India&apos;s social sector and ask whether we are practising the values we preach.
+          </p>
+          <Link href="/about" className="arrow-link">
+            Read our story →
+          </Link>
+        </div>
+
+        <ul className="wwd-pillars">
+          <li>
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M6 9h28v17H18l-8 7v-7H6z" />
+              <path d="M13 16h14M13 20h9" />
+            </svg>
+            <div>
+              <h3>Pinch the sector</h3>
+              <p>
+                Using satire, humour and uncomfortable questions to poke at the contradictions of a
+                sector that promises so much, while occasionally forgetting to look in the mirror.
+              </p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <circle cx="20" cy="12" r="5" />
+              <circle cx="9" cy="16" r="3.5" />
+              <circle cx="31" cy="16" r="3.5" />
+              <path d="M11 32c0-6 4-10 9-10s9 4 9 10M3 31c0-4 2.5-7 6-7M37 31c0-4-2.5-7-6-7" />
+            </svg>
+            <div>
+              <h3>Change how we work</h3>
+              <p>
+                Pushing the sector to take work culture, equity, pay, power and wellbeing as
+                seriously as the change it wants to create outside its walls.
+              </p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M20 5a10 10 0 0 0-6 18c1.5 1.2 2 2.6 2 4v1h8v-1c0-1.4.5-2.8 2-4A10 10 0 0 0 20 5z" />
+              <path d="M16 32h8M17 36h6" />
+            </svg>
+            <div>
+              <h3>Change the way change happens</h3>
+              <p>
+                Making the case for organisations that listen to their own people, advocate for
+                systemic change and stop treating communities as delivery targets.
+              </p>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <DidYouKnow />

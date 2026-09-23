@@ -3,9 +3,21 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/memes", label: "Memes" },
+  { href: "/stories", label: "Stories" },
+  { href: "/about", label: "About" },
+]
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`)
 
   return (
     <header className="site-header">
@@ -32,10 +44,17 @@ export default function SiteHeader() {
       </button>
 
       <nav className={open ? "main-nav open" : "main-nav"}>
-        <Link href="/" onClick={() => setOpen(false)}>Home</Link>
-        <Link href="/memes" onClick={() => setOpen(false)}>Memes</Link>
-        <Link href="/stories" onClick={() => setOpen(false)}>Stories</Link>
-        <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+        {NAV_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={isActive(link.href) ? "active" : undefined}
+            aria-current={isActive(link.href) ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            {link.label}
+          </Link>
+        ))}
       </nav>
     </header>
   )
