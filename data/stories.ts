@@ -1,10 +1,28 @@
+export type StoryTable = {
+  title: string
+  columns: string[]
+  rows: string[][]
+  // Row indexes to emphasise, e.g. totals
+  highlightRows?: number[]
+  source?: string
+}
+
+export type StoryFigure = {
+  src: string
+  caption?: string
+}
+
+// Paragraphs, list items and table cells support **bold** text.
 export type StorySection = {
   heading: string
   paragraphs: string[]
+  list?: string[]
+  table?: StoryTable
   quote?: string
   quoteAttribution?: string
   figure?: string
   figureCaption?: string
+  figures?: StoryFigure[]
 }
 
 export type Story = {
@@ -18,10 +36,11 @@ export type Story = {
   author: string
   authorHandle: string
   readTime: string
+  publishedAt?: string // YYYY-MM-DD
   sections: StorySection[]
 }
 
-export const stories: Story[] = [
+const allStories: Story[] = [
   {
     id: 1,
     slug: "who-decides-founder-salaries",
@@ -33,6 +52,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "6 min read",
+    publishedAt: "2025-12-10",
     sections: [
       {
         heading: "On Paper, the Board Decides",
@@ -112,6 +132,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "7 min read",
+    publishedAt: "2025-12-15",
     sections: [
       {
         heading: "The Claim",
@@ -183,6 +204,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "6 min read",
+    publishedAt: "2025-12-27",
     sections: [
       {
         heading: "A History Before She Arrived",
@@ -242,6 +264,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "6 min read",
+    publishedAt: "2025-07-09",
     sections: [
       {
         heading: "Let's Start With the Numbers",
@@ -299,6 +322,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "5 min read",
+    publishedAt: "2026-04-29",
     sections: [
       {
         heading: "The Law Assumes Accountability",
@@ -352,6 +376,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "8 min read",
+    publishedAt: "2025-08-03",
     sections: [
       {
         heading: "What Is FCRA?",
@@ -416,6 +441,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "7 min read",
+    publishedAt: "2025-07-25",
     sections: [
       {
         heading: "Textbooks Under the Microscope",
@@ -481,6 +507,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "5 min read",
+    publishedAt: "2025-12-29",
     sections: [
       {
         heading: "A Polarised Political Culture",
@@ -522,6 +549,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "4 min read",
+    publishedAt: "2025-10-24",
     sections: [
       {
         heading: "Who Bears the Weakness",
@@ -559,6 +587,7 @@ export const stories: Story[] = [
     author: "Social Sector Majdoor Union",
     authorHandle: "wokeonpaper",
     readTime: "5 min read",
+    publishedAt: "2025-09-17",
     sections: [
       {
         heading: "One of the Most Profitable Industries in the World",
@@ -594,4 +623,309 @@ export const stories: Story[] = [
       },
     ],
   },
+  {
+    id: 11,
+    slug: "bihar-sir-democracy-under-threat",
+    title: "Is Democracy Under Threat in Bihar?",
+    dek: "From the state where Gandhi began the Champaran Satyagraha, around 3 crore people now fear losing their right to vote.",
+    tag: "Democracy & Rights",
+    cover: "/stories/bihar-cover.jpg",
+    author: "Social Sector Majdoor Union",
+    authorHandle: "wokeonpaper",
+    readTime: "6 min read",
+    publishedAt: "2025-07-23",
+    sections: [
+      {
+        heading: "A Routine Exercise?",
+        paragraphs: [
+          `Bihar is going through a **Special Intensive Revision (SIR)** of its electoral rolls, ordered by the Election Commission of India (ECI).`,
+          `The ECI calls it a routine measure for the **"purity of rolls"**. Critics are raising serious alarms.`,
+        ],
+      },
+      {
+        heading: "What the ECI Says It Is For",
+        paragraphs: [`According to the ECI, the SIR is meant to:`],
+        list: [
+          `**weed out illegal immigrants**`,
+          `**update voter lists** for people who have migrated`,
+          `**remove deceased voters**`,
+        ],
+        figures: [
+          {
+            src: "/stories/bihar-theprint.jpg",
+            caption: "ThePrint, 22 July 2025: \"Bihar mimics 19th-century American South. Citizenship is now weaponised to exclude voters\" — Ashutosh Varshney.",
+          },
+        ],
+      },
+      {
+        heading: "What Civil Society Says It Is",
+        paragraphs: [
+          `Civil society groups and activists see something very different. They call the exercise an **"audacious attempt at mass disenfranchisement"**, or simply **"votebandi"**.`,
+        ],
+      },
+      {
+        heading: "Proof of Citizenship, for the First Time",
+        paragraphs: [
+          `For the first time, every voter must provide **documentary proof of citizenship** to stay on the list.`,
+          `Crucially, the documents most people actually have — **Aadhaar, Voter ID and ration cards — are not accepted** as standalone proof of citizenship for this process.`,
+        ],
+        figures: [
+          {
+            src: "/stories/bihar-the-hindu.jpg",
+            caption: "The Hindu, 22 July 2025: \"Aadhaar, voter ID and ration cards can't be accepted as 'standalone documents' for SIR: ECI\" — Krishnadas Rajagopal.",
+          },
+        ],
+      },
+      {
+        heading: "Who Gets Left Out",
+        paragraphs: [
+          `Strict documentation rules do not hit everyone equally. They fall hardest on **Muslims, Scheduled Castes, Scheduled Tribes and migrant workers**, who often lack access to these specific documents.`,
+          `Bihar has **high poverty and migration rates**. Many residents simply do not have the **birth certificates or parental records** now being demanded.`,
+          `Experts warn that the new requirements could **disenfranchise around 3 crore voters**, largely from marginalised communities, because of the stringent conditions and short timelines. It is widely seen as an **"anti-poor move"**.`,
+        ],
+        figures: [
+          {
+            src: "/stories/bihar-toi-adr.jpg",
+            caption: "The Times of India, 7 July 2025: the Association for Democratic Reforms tells the Supreme Court the SIR would disenfranchise lakhs of voters from marginalised sections.",
+          },
+        ],
+      },
+      {
+        heading: "52 Lakh Names, and Counting",
+        paragraphs: [
+          `By the ECI's own count, **over 52 lakh names** have already been flagged for removal from Bihar's voter list: **18 lakh** reported dead, **26 lakh** said to have moved to other constituencies, and **7 lakh** found registered in more than one place.`,
+          `Another **21 lakh** electors had not returned their enumeration forms. Taken together, that is more than **73 lakh people — over 9% of Bihar's electorate —** whose place on the roll was in question barely a week before the draft roll was due on 1 August.`,
+        ],
+        table: {
+          title: "Bihar SIR: status as of 22 July 2025",
+          columns: ["", "Electors", "Share"],
+          rows: [
+            ["Total electors (as on 24 June 2025)", "7,89,69,844", "100%"],
+            ["Enumeration forms received", "7,16,04,102", "90.67%"],
+            ["Enumeration forms digitised", "7,13,65,460", "90.37%"],
+            ["**Electors not found at their addresses**", "**52,30,126**", "**6.62%**"],
+            ["↳ Reported deceased", "18,66,869", "2.36%"],
+            ["↳ Permanently shifted", "26,01,031", "3.29%"],
+            ["↳ Enrolled at multiple places", "7,50,742", "0.95%"],
+            ["↳ Not traceable", "11,484", "0.01%"],
+            ["Forms yet to be received", "21,35,616", "2.70%"],
+          ],
+          highlightRows: [3, 8],
+          source: "Election Commission of India, Press Note ECI/PN/261/2025",
+        },
+        figures: [
+          {
+            src: "/stories/bihar-india-today.jpg",
+            caption: "India Today, 22 July 2025: \"Over 52 lakh names removed from Bihar voter list in ongoing revision: Poll body\".",
+          },
+          {
+            src: "/stories/bihar-eci-press-note.png",
+            caption: "The ECI's press note of 22 July 2025, \"Facts revealed from Bihar SIR so far\".",
+          },
+        ],
+      },
+      {
+        heading: "A Question of Constitutional Power",
+        paragraphs: [
+          `The SIR faces legal scrutiny for potentially **violating constitutional principles (Articles 324 and 326)** and settled election law such as the Representation of the People Act, 1950. The Supreme Court is hearing petitions challenging the decision.`,
+          `Critics argue the ECI is **exceeding its constitutional powers** in two ways: by imposing new eligibility conditions that no existing law lays down, and by running a **mass citizenship inquiry** — a function the Citizenship Act, 1955 reserves for the central government.`,
+        ],
+        figures: [
+          {
+            src: "/stories/bihar-explainer.jpg",
+            caption: "\"Explainer: Is Bihar SIR in Line With Basic Constitutional Principles and Settled Election Law?\" — Pavan Korada, 21 July 2025.",
+          },
+        ],
+      },
+      {
+        heading: "The Burden Shifts to the Citizen",
+        paragraphs: [
+          `The ECI's order moves the responsibility of being on the voters' list **from the state to the individual citizen**. Anyone who fails to submit a fresh enumeration form by **25 July** will automatically be **left out of the draft rolls**.`,
+          `The way citizenship is being established, and the documents being demanded, could make this an **exclusionary process** — one that undermines the principle of universal adult franchise and the **fair and inclusive elections** that are the hallmark of Indian democracy.`,
+        ],
+      },
+      {
+        heading: "Assurances That Don't Settle the Question",
+        paragraphs: [
+          `The ECI has assured the Supreme Court that being found **ineligible for the electoral roll under the SIR will not terminate anyone's citizenship**.`,
+          `But the suddenness of the exercise has drawn its own criticism. Earlier revisions involved consultation with political parties; this one did not.`,
+        ],
+        figures: [
+          {
+            src: "/stories/bihar-criticism.jpg",
+            caption: "\"Why Election Commission's Bihar SIR exercise has received widespread criticism\" — Ranjit Bhushan, 8 July 2025.",
+          },
+        ],
+      },
+      {
+        heading: "Why This Matters Beyond Bihar",
+        paragraphs: [
+          `What happens in Bihar **could set a precedent** for elections across the country.`,
+          `Safeguarding voting rights and keeping democratic processes inclusive is **fundamental to every Indian citizen**. Stay informed, and speak up for fair electoral practices in Bihar.`,
+        ],
+      },
+    ],
+  },
+  {
+    id: 12,
+    slug: "why-government-schools-are-shutting-down",
+    title: "Why Are Government Schools Shutting Down in India?",
+    dek: "Between 2014 and 2024, 89,441 government schools were shut in the name of \"rationalisation\". The children they served are paying the price.",
+    tag: "Education & Public Services",
+    cover: "/stories/schools-cover.jpg",
+    author: "Social Sector Majdoor Union",
+    authorHandle: "wokeonpaper",
+    readTime: "6 min read",
+    publishedAt: "2025-07-04",
+    sections: [
+      {
+        heading: "89,441 Schools, Gone",
+        paragraphs: [
+          `India has seen a steep decline in government schools. Between 2014–15 and 2023–24, **89,441 government schools were shut** — a drop of **8%**.`,
+          `Over the same decade, the number of **private schools rose by nearly 15%**.`,
+        ],
+        table: {
+          title: "Change in the number of schools, 2014–15 to 2023–24",
+          columns: ["School type", "2014–15", "2023–24", "Change", "% change"],
+          rows: [
+            ["Government schools", "11,07,101", "10,17,660", "−89,441", "**−8.0%**"],
+            ["Private schools", "2,88,164", "3,31,108", "+42,944", "**+14.9%**"],
+          ],
+          source: "UDISE+",
+        },
+        figures: [
+          {
+            src: "/stories/schools-clippings.jpg",
+            caption: "Hindustan Times (3 February 2025) and The Week (27 November 2024) on the decline of government schools and the closures that followed the school rationalisation policy.",
+          },
+        ],
+      },
+      {
+        heading: "Where the Schools Closed",
+        paragraphs: [
+          `The closures are concentrated in a handful of states. **Madhya Pradesh and Uttar Pradesh alone lost 54,536 government schools** — about 61% of all closures nationwide.`,
+          `In proportion to their size, the hardest hit were Madhya Pradesh, which lost **nearly one in four** of its government schools, and Jammu & Kashmir, which lost **more than one in five**.`,
+        ],
+        table: {
+          title: "States with the most government school closures, 2014–15 to 2023–24",
+          columns: ["State/UT", "2014–15", "2023–24", "Schools closed", "% decline"],
+          rows: [
+            ["Madhya Pradesh", "1,21,849", "92,439", "29,410", "24.1%"],
+            ["Uttar Pradesh", "1,62,228", "1,37,102", "25,126", "15.5%"],
+            ["Odisha", "58,697", "48,671", "10,026", "17.1%"],
+            ["Jharkhand", "41,322", "35,795", "5,527", "13.4%"],
+            ["Jammu & Kashmir", "23,874", "18,758", "5,116", "21.4%"],
+            ["Uttarakhand", "17,753", "16,201", "1,552", "8.7%"],
+            ["Arunachal Pradesh", "3,408", "2,847", "561", "16.4%"],
+            ["Nagaland", "2,279", "1,952", "327", "14.4%"],
+            ["Goa", "906", "789", "117", "12.9%"],
+          ],
+          source: "UDISE+",
+        },
+      },
+      {
+        heading: "Fewer Schools, Fewer Students",
+        paragraphs: [
+          `The closures have come alongside a fall in the number of children in school. Total enrolment dropped by **over 1.22 crore students** between 2018–19 and 2023–24.`,
+        ],
+        list: [
+          `Enrolment held steady at around **26 crore** from 2012 to 2022.`,
+          `The **drop of 1.22 crore students (about 6%)** between 2018–19 and 2023–24 marks a significant decline.`,
+          `2022–23 and **2023–24** were the first years with major **downward shifts** after a decade of stability.`,
+        ],
+        table: {
+          title: "Total student enrolment in Indian schools, Grades 1–12",
+          columns: ["Academic year", "Enrolment (crore)", "Change from previous", "Remarks"],
+          rows: [
+            ["2012–13", "26.3", "—", "Start of UDISE+ data tracking"],
+            ["2018–19", "~26.0", "Stable", "Peak/stable period"],
+            ["2021–22", "~26.0", "—", "Data released in Nov 2022"],
+            ["2022–23", "25.18", "↓ ~0.82 (~3.2%)", "Start of notable decline"],
+            ["2023–24", "24.8", "↓ 0.38 (~1.5%)", "**Total drop of 1.22 crore (↓6%)**"],
+          ],
+          highlightRows: [4],
+          source: "UDISE+",
+        },
+      },
+      {
+        heading: "What Is School Rationalisation?",
+        paragraphs: [
+          `So why is the government shutting down its own schools? It calls the policy **rationalisation**.`,
+          `Rationalisation means **merging or closing small, under-enrolled government schools** and reallocating their resources to make education delivery more "efficient".`,
+        ],
+      },
+      {
+        heading: "Closure Is Not a Transfer",
+        paragraphs: [
+          `On paper, children from a closed school simply move to a nearby one. In practice, it is not that simple.`,
+        ],
+        quote: "With the shutting down of schools, parents seek re-admission of their children to another nearby school. It is not an automatic transfer. Students drop out during this process, where parents are not comfortable seeking re-admission because of longer distances.",
+        quoteAttribution: "Prof. Mehta, former Head of the Department of EMIS, NIEPA/NUEPA, New Delhi",
+      },
+      {
+        heading: "An Economic Logic, Not an Educational One",
+        paragraphs: [
+          `Rationalisation is rooted in cost-cutting: fewer teachers, fewer buildings, more centralised resources, less government spending.`,
+          `But what is economically viable is **not always socially or morally just**.`,
+          `Education is not just a service; it is a **constitutional right**. Cutting corners on education for the poor to reduce the fiscal burden sends a damaging signal.`,
+        ],
+      },
+      {
+        heading: "Who Is Hit Hardest",
+        paragraphs: [
+          `The 2017 MHRD guidelines describe rationalisation as a **"participatory and consultative process"** meant to improve educational quality and make better use of resources.`,
+          `In practice, it often means closing schools that serve **remote, tribal and socio-economically marginalised communities**.`,
+        ],
+        list: [
+          `Most closures happen in **remote and tribal areas**, affecting **Dalit and Adivasi** children and those from economically disadvantaged families.`,
+          `**Girls** are especially vulnerable: longer distances and safety concerns often lead to **higher dropout rates**.`,
+          `Rationalisation risks **deepening existing inequalities** and pushing the most vulnerable children further away from education.`,
+        ],
+      },
+      {
+        heading: "On the Ground in Uttar Pradesh",
+        paragraphs: [
+          `In Uttar Pradesh, where school mergers have triggered protests, parents told Newslaundry that their children **"have been sitting at home since July 1"**.`,
+        ],
+        quote: "The road fills up with water. Only if there is no rain there is a road to go… We have just been waiting for the court to reverse this order.",
+        quoteAttribution: "Avdesh, a parent, speaking to Newslaundry",
+        figures: [
+          {
+            src: "/stories/schools-newslaundry.jpg",
+            caption: "Newslaundry ground report: \"'Waiting for our school to reopen': Kids pay the price of UP's school merger policy\" — Samarth Grover.",
+          },
+        ],
+      },
+      {
+        heading: "What Could Be Done Instead",
+        paragraphs: [],
+        list: [
+          `**Strengthen small schools.** Equip them with multi-grade teaching support, better infrastructure and digital access.`,
+          `**Let local context lead.** Any closure must be preceded by a deep local needs assessment.`,
+          `**Centre the community.** Let local voices, especially from marginalised groups, lead the decision-making.`,
+          `**Keep the spirit of the RTE.** Ensure access, equity and quality — not just structural compliance.`,
+        ],
+        figures: [
+          {
+            src: "/stories/schools-closing.jpg",
+            caption: "Education is everyone's right. शिक्षा है सबका अधिकार।",
+          },
+        ],
+      },
+    ],
+  },
 ]
+
+// Newest first; undated stories go last.
+export const stories: Story[] = [...allStories].sort((a, b) =>
+  (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "")
+)
+
+export function formatStoryDate(date: string) {
+  return new Date(date + "T00:00:00Z").toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+}

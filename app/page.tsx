@@ -5,7 +5,7 @@ import SiteFooter from "@/app/components/SiteFooter"
 import HeroFrame from "@/app/components/HeroFrame"
 import DidYouKnow from "@/app/components/DidYouKnow"
 import CommunityTweets from "@/app/components/CommunityTweets"
-import { stories } from "@/data/stories"
+import { stories, formatStoryDate } from "@/data/stories"
 
 const CONTRIBUTION_THEMES = [
   {
@@ -427,6 +427,9 @@ export default function Home() {
                 <span>{story.tag.toUpperCase()}</span>
                 <h3>{story.title}</h3>
                 <p>{story.dek}</p>
+                {story.publishedAt && (
+                  <time className="story-date" dateTime={story.publishedAt}>{formatStoryDate(story.publishedAt)}</time>
+                )}
               </div>
             </Link>
           ))}

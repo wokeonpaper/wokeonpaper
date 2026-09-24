@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { stories } from "@/data/stories"
+import { stories, formatStoryDate } from "@/data/stories"
 import SiteHeader from "@/app/components/SiteHeader"
 import SiteFooter from "@/app/components/SiteFooter"
 
@@ -30,6 +30,9 @@ export default function StoriesPage() {
               <span className="story-tag">{story.tag}</span>
               <h2>{story.title}</h2>
               <p>{story.dek}</p>
+              {story.publishedAt && (
+                <time className="story-date" dateTime={story.publishedAt}>{formatStoryDate(story.publishedAt)}</time>
+              )}
               <span className="read-meme">Read the story →</span>
             </div>
           </Link>

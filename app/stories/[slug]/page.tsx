@@ -1,11 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { stories } from "@/data/stories"
+import { stories, formatStoryDate } from "@/data/stories"
 import SiteHeader from "@/app/components/SiteHeader"
 import SiteFooter from "@/app/components/SiteFooter"
 
 type Props = { params: Promise<{ slug: string }> }
+
+// Turns **bold** markers in story text into <strong> elements.
+function renderInline(text: string) {
+  return text.split(/\*\*(.+?)\*\*/g).map((part, i) => (i % 2 ? <strong key={i}>{part}</strong> : part))
+}
 
 export function generateStaticParams() {
   return stories.map((s) => ({ slug: s.slug }))
@@ -18,7 +23,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: story.title + " | WokeOnPaper",
     description: story.dek,
-    openGraph: { title: story.title, description: story.dek, images: [story.cover], type: "article" },
+    openGraph: { title: story.title, description: story.dek, images: [story.cover], type: "article", publishedTime: story.publishedAt },
     twitter: { card: "summary_large_image", title: story.title, description: story.dek, images: [story.cover] },
   }
 }
@@ -51,7 +56,13 @@ export default async function StoryPage({ params }: Props) {
             <Image src="/brand/avatar.png" alt="" width={40} height={40} className="byline-avatar" />
             <div>
               <span className="byline-name">{story.author}</span>
-              <span className="byline-meta">@{story.authorHandle} &middot; {story.readTime}</span>
+              <span className="byline-meta">@{story.authorHandle} &middot; {story.publishedAt && (
+                  <>
+                    <time dateTime={story.publishedAt}>{formatStoryDate(story.publishedAt)}</time> &middot;{" "}
+                  </>
+                )}
+                {story.readTime}
+              </span>
             </div>
           </div>
         </header>
@@ -67,8 +78,47 @@ export default async function StoryPage({ params }: Props) {
               <section key={section.heading} className="post-section">
                 <h2>{section.heading}</h2>
                 {section.paragraphs.map((para, i) => (
-                  <p key={i}>{para}</p>
+                  <p key={i}>{renderInline(para)}</p>
                 ))}
+
+                {section.list && (
+                  <ul className="post-list">
+                    {section.list.map((item, i) => (
+                      <li key={i}>{renderInline(item)}</li>
+                    ))}
+                  </ul>
+                )}
+
+                {section.table && (
+                  <figure className="post-table">
+                    <figcaption className="post-table-title">{section.table.title}</figcaption>
+                    <div className="post-table-scroll">
+                      <table>
+                        <thead>
+                          <tr>
+                            {section.table.columns.map((col) => (
+                              <th key={col} scope="col">{col}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {section.table.rows.map((row, r) => (
+                            <tr key={r} className={section.table?.highlightRows?.includes(r) ? "is-highlight" : undefined}>
+                              {row.map((cell, c) =>
+                                c === 0 ? (
+                                  <th key={c} scope="row">{renderInline(cell)}</th>
+                                ) : (
+                                  <td key={c}>{renderInline(cell)}</td>
+                                )
+                              )}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {section.table.source && <p className="post-table-source">Source: {section.table.source}</p>}
+                  </figure>
+                )}
 
                 {section.quote && (
                   <blockquote className="pull-quote">
@@ -83,6 +133,13 @@ export default async function StoryPage({ params }: Props) {
                     {section.figureCaption && <figcaption>{section.figureCaption}</figcaption>}
                   </figure>
                 )}
+
+                {section.figures?.map((fig) => (
+                  <figure key={fig.src} className="post-figure">
+                    <Image src={fig.src} alt={fig.caption ?? ""} width={1080} height={1350} />
+                    {fig.caption && <figcaption>{fig.caption}</figcaption>}
+                  </figure>
+                ))}
               </section>
             )
           })}

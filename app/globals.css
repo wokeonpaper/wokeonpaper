@@ -1979,6 +1979,13 @@ img {
   font-size: 15px;
 }
 
+.story-date {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
 .byline-meta {
   font-size: 13px;
   color: var(--muted);
@@ -2155,6 +2162,104 @@ img {
   line-height: 1.5;
   color: var(--muted);
   font-style: italic;
+}
+
+.post-body strong {
+  color: var(--purple-dark);
+}
+
+.post-list {
+  margin: 0 0 26px;
+  padding-left: 22px;
+}
+
+.post-list li {
+  margin-bottom: 12px;
+  padding-left: 4px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2c2830;
+}
+
+.post-list li::marker {
+  color: var(--purple);
+}
+
+.post-table {
+  margin: 34px 0;
+}
+
+.post-table-title {
+  margin-bottom: 12px;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.post-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.post-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-table th,
+.post-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.post-table th:first-child {
+  text-align: left;
+  white-space: normal;
+  min-width: 140px;
+}
+
+.post-table thead th {
+  background: var(--purple);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.post-table tbody th {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.post-table tbody tr:nth-child(even) {
+  background: #faf8fb;
+}
+
+.post-table tbody tr:last-child th,
+.post-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.post-table tbody tr.is-highlight {
+  background: var(--lilac);
+}
+
+.post-table tbody tr.is-highlight th,
+.post-table tbody tr.is-highlight td {
+  font-weight: 700;
+  color: var(--purple-dark);
+}
+
+.post-table-source {
+  margin: 10px 0 0 !important;
+  font-size: 13px !important;
+  color: var(--muted) !important;
 }
 
 /* Drop cap on the first paragraph of the body */
