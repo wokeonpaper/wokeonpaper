@@ -12,8 +12,8 @@ export default function SiteFooter() {
           <Image
             src="/brand/logo-reversed.png"
             alt="WokeOnPaper"
-            width={480}
-            height={497}
+            width={600}
+            height={591}
             className="footer-logo"
           />
           <p>

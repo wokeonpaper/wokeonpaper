@@ -25,8 +25,8 @@ export default function SiteHeader() {
         <Image
           src="/brand/logo-primary.png"
           alt="WokeOnPaper"
-          width={480}
-          height={497}
+          width={600}
+          height={592}
           className="brand-logo"
           priority
         />
