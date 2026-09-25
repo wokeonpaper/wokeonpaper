@@ -914,6 +914,155 @@ const allStories: Story[] = [
       },
     ],
   },
+  {
+    id: 13,
+    slug: "before-childhood-became-a-marketplace",
+    title: "Before Childhood Became a Marketplace",
+    dek: "The internet is nostalgic for an AI-free, less commercialised '90s childhood. What exactly are we missing?",
+    tag: "Childhood & Culture",
+    cover: "/stories/childhood-cover.jpg",
+    author: "WokeOnPaper",
+    authorHandle: "wokeonpaper",
+    readTime: "5 min read",
+    publishedAt: "2026-09-25",
+    sections: [
+      {
+        heading: "The Market Was Already Knocking",
+        paragraphs: [
+          `For many '90s kids, childhood was **not free from commercialisation**.`,
+          `India's economic liberalisation in 1991 opened the economy to greater competition. At the same time, **satellite television and private channels** expanded rapidly, bringing more products, brands and advertising into Indian homes.`,
+          `Children were already being recognised as an advertising audience by the late 1980s. But the **scale and reach of marketing** were very different from today.`,
+          `The market was opening up. It just had not yet found as many ways to **follow children everywhere**.`,
+        ],
+        figures: [{ src: "/stories/childhood-02.jpg" }],
+      },
+      {
+        heading: "Advertising Was There, Just Less of It",
+        paragraphs: [
+          `Advertising was already part of everyday life. We saw it on television, in newspapers and magazines, on billboards and in shops.`,
+          `But children encountered **far fewer commercial messages** than they do today. There were no smartphones, social media feeds or personalised platforms constantly competing for their attention.`,
+          `Commercial culture existed, but it **occupied much less of a child's everyday world**.`,
+        ],
+        figures: [{ src: "/stories/childhood-03.jpg" }],
+      },
+      {
+        heading: "We Didn't Need Much to Play",
+        paragraphs: [
+          `A cricket bat. A ball. Some marbles. And often, things that weren't even toys:`,
+        ],
+        list: [
+          `A cardboard box could become a **house**.`,
+          `A stick could become a **sword**.`,
+          `A bedsheet could become a **tent**.`,
+        ],
+        figures: [{ src: "/stories/childhood-04.jpg" }],
+      },
+      {
+        heading: "Imagination Did the Work",
+        paragraphs: [
+          `Children **made toys with their imagination**.`,
+          `Commercialised toys increasingly come with ready-made characters, stories and functions, leaving **little or no room for imagination** and transformation.`,
+        ],
+      },
+      {
+        heading: "When a Cartoon Was Just a Cartoon",
+        paragraphs: [
+          `You liked a cartoon. You watched it. Maybe you had a small toy or a notebook with the character on it. That was often where it ended.`,
+          `Today, entertainment companies can extend a character across **toys, clothes, food, games, books and accessories**. Research describes how this kind of **brand licensing** has tied children's products ever more closely to media characters.`,
+          `The character you loved gradually became **something you could keep buying**.`,
+        ],
+        figures: [{ src: "/stories/childhood-05.jpg" }],
+      },
+      {
+        heading: "Selling Aspirations",
+        paragraphs: [
+          `Today the market sells more than products to children. It sells **aspirations**:`,
+        ],
+        list: [`What you should look like.`, `What you should wear.`, `What should make you "cool".`],
+        figures: [{ src: "/stories/childhood-06.jpg" }],
+      },
+      {
+        heading: "Growing Up Faster",
+        paragraphs: [
+          `Marketers deliberately used **older children and aspirational images** to influence younger ones.`,
+          `Susan Linn describes this as **"aspirational marketing"**: encouraging younger children to want the trappings of an older identity before they are emotionally ready for it.`,
+        ],
+      },
+      {
+        heading: "\"Why Don't I Have What Everyone Else Has?\"",
+        paragraphs: [
+          `A child sees something. Other children have it. An advertisement makes it desirable. So they ask their parents.`,
+          `But parents don't have unlimited incomes. The market can keep expanding what children are encouraged to want, **even when family incomes cannot keep pace**.`,
+        ],
+        quote: "Not just \"I don't have it.\" But \"Why don't I have what everyone else has?\"",
+        figures: [{ src: "/stories/childhood-07.jpg" }],
+      },
+      {
+        heading: "The Pressure Falls on Parents, the Comparison on Children",
+        paragraphs: [
+          `Commercialisation can make **economic differences more visible** to children.`,
+          `A family may provide a loving home, a good education and everything they can reasonably afford, yet still struggle to match the lifestyle that advertising and popular culture present as desirable.`,
+          `Research has linked commercial culture and materialistic values with **family stress, parent–child conflict and unhappiness**.`,
+          `The pressure falls on parents, but **children experience it as comparison**.`,
+        ],
+        figures: [{ src: "/stories/childhood-08.jpg" }],
+      },
+      {
+        heading: "Sharing Instead of Owning",
+        paragraphs: [
+          `Many children experienced things **through friends rather than ownership**. One child had a kitchen set. Another had the comics. Someone had a video game. Everyone gathered at the house with the television.`,
+          `Sharing allowed children to **participate without every family having to buy everything**.`,
+          `Today, when products increasingly become **markers of identity**, simply sharing the experience may not always feel enough.`,
+        ],
+        figures: [{ src: "/stories/childhood-09.jpg" }],
+      },
+      {
+        heading: "Even Boredom Had Value",
+        paragraphs: [`"I'm bored" often meant:`],
+        list: [`Go outside.`, `Make something.`, `Invent a game.`],
+        figures: [{ src: "/stories/childhood-10.jpg" }],
+      },
+      {
+        heading: "Time Without a Product Attached",
+        paragraphs: [
+          `Children had more opportunities to fill time **without a product or platform directing their attention**.`,
+          `Creative play matters because it supports **learning, creativity, problem-solving** and children's ability to make meaning of their experiences.`,
+        ],
+      },
+      {
+        heading: "Not an Idyllic Time",
+        paragraphs: [
+          `The '90s were hardly an equal or idyllic time. Many children faced **poverty, unsafe spaces, discrimination and limited opportunities**.`,
+          `The point is narrower. Commercial culture occupied less of childhood, and many ordinary pleasures remained **inexpensive, shared and locally created**.`,
+          `That is the part worth examining — before we turn nostalgia into a claim that everything was better.`,
+        ],
+        figures: [{ src: "/stories/childhood-11.jpg" }],
+      },
+      {
+        heading: "What We Can Still Protect",
+        paragraphs: [
+          `We cannot, and probably should not, recreate the '90s. But we can protect some of what made childhood **less dependent on consumption**. Children need:`,
+        ],
+        list: [
+          `**time to play** without instructions`,
+          `**places to spend time outdoors**`,
+          `**opportunities to create** rather than consume`,
+          `**relationships** that don't depend on what they own`,
+        ],
+        figures: [{ src: "/stories/childhood-12.jpg" }],
+      },
+      {
+        heading: "What the Nostalgia Is Really About",
+        paragraphs: [
+          `These things don't have to be expensive to be valuable.`,
+          `Perhaps our nostalgia isn't really about Doordarshan, cassette tapes, cricket in empty plots or old school photographs. It is about growing up at a time when **many of the things that made childhood enjoyable didn't need to be bought**.`,
+          `You could play, belong, create and spend time with others without constantly measuring yourself against what the market had to offer.`,
+          `Maybe that's **the part of that childhood we should try to preserve**.`,
+        ],
+        figures: [{ src: "/stories/childhood-13.jpg" }],
+      },
+    ],
+  },
 ]
 
 // Newest first; undated stories go last.
