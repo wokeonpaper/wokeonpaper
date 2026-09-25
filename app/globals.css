@@ -1613,15 +1613,6 @@ img {
   box-shadow: 0 20px 60px rgba(50, 22, 63, 0.2);
 }
 
-.dyk-kicker {
-  margin: 0 0 18px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--yellow);
-}
-
 .dyk-content {
   min-height: 260px;
 }
@@ -1675,6 +1666,165 @@ img {
 .dyk-dot.active {
   background: var(--yellow);
   transform: scale(1.15);
+}
+
+/* Banraksh meme, fading into the card from the right edge */
+.dyk-card {
+  position: relative;
+  min-height: 460px;
+}
+
+.dyk-content,
+.dyk-dots {
+  position: relative;
+  z-index: 2;
+  max-width: 58%;
+}
+
+.dyk-meme {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  margin: 0;
+}
+
+.dyk-meme img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 20%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 34%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 34%);
+}
+
+.dyk-bubble {
+  position: absolute;
+  right: 62%;
+  top: 29%;
+  max-width: 9.5em;
+  padding: 10px 16px 12px;
+  border-radius: 18px;
+  background: var(--yellow);
+  color: var(--purple);
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: clamp(18px, 1.65vw, 22px);
+  line-height: 1.2;
+  transform: rotate(-4deg);
+  box-shadow: 4px 4px 0 var(--purple-dark);
+}
+
+/* tail pointing right, at Banraksh's mouth */
+.dyk-bubble::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: -14px;
+  border-width: 4px 0 12px 16px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--yellow);
+}
+
+.dyk-arrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1.5px solid var(--purple);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--purple);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dyk-arrow:hover {
+  background: var(--yellow);
+}
+
+.dyk-arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dyk-arrow-prev {
+  left: -20px;
+}
+
+.dyk-arrow-next {
+  right: -20px;
+}
+
+.dyk-arrow-prev:hover {
+  transform: translate(-3px, -50%);
+}
+
+.dyk-arrow-next:hover {
+  transform: translate(3px, -50%);
+}
+
+@media (max-width: 800px) {
+  .dyk-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  .dyk-meme {
+    order: 5;
+  }
+
+  .dyk-content,
+  .dyk-dots {
+    max-width: none;
+  }
+
+  .dyk-meme {
+    position: relative;
+    width: auto;
+    height: 260px;
+    margin: 26px -60px -52px;
+  }
+
+  .dyk-meme img {
+    object-position: 40% 12%;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 30%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 30%);
+  }
+
+  .dyk-bubble {
+    right: auto;
+    left: 3%;
+    top: 34%;
+    font-size: 15px;
+  }
+
+  .dyk-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dyk-arrow-prev {
+    left: -14px;
+  }
+
+  .dyk-arrow-next {
+    right: -14px;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -4341,4 +4491,11 @@ img {
     font-size: 13px;
   }
 
+}
+
+/* the Did You Know card has smaller padding on phones */
+@media (max-width: 700px) {
+  .dyk-meme {
+    margin: 26px -26px -36px;
+  }
 }

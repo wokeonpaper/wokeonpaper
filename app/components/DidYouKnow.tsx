@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useState } from "react"
 
 type Stat = {
@@ -62,6 +63,7 @@ export default function DidYouKnow() {
   }, [index, paused])
 
   const stat = STATS[index]
+  const go = (step: number) => setIndex((i) => (i + step + STATS.length) % STATS.length)
 
   return (
     <section className="dyk-section">
@@ -72,7 +74,18 @@ export default function DidYouKnow() {
         onFocus={() => setPaused(true)}
         onBlur={() => setPaused(false)}
       >
-        <p className="dyk-kicker">Did you know?</p>
+        <button type="button" className="dyk-arrow dyk-arrow-prev" aria-label="Previous statistic" onClick={() => go(-1)}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 L 8 12 L 15 19" /></svg>
+        </button>
+        <button type="button" className="dyk-arrow dyk-arrow-next" aria-label="Next statistic" onClick={() => go(1)}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5 L 16 12 L 9 19" /></svg>
+        </button>
+
+        {/* Banraksh from Panchayat, gesturing at the stat */}
+        <figure className="dyk-meme">
+          <Image src="/wop/banraksh.jpg" alt="Banraksh from Panchayat, pointing at the statistic" width={310} height={322} />
+          <figcaption className="dyk-bubble">Dekh raha hai Binod?</figcaption>
+        </figure>
 
         <div key={index} className="dyk-content">
           <p className="dyk-headline">{stat.headline}</p>
