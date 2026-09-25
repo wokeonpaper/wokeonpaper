@@ -436,30 +436,64 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="majdoor-section">
-        <div className="majdoor-copy">
-          <h2>For the people doing the work.</h2>
-
-          <p>
-            For people asking where the money went. For people who have
-            attended one too many strategy workshops.
-          </p>
-
-          <Link href="/memes/30" className="text-link">
-            Meet the bad NGO worker →
+      <section className="bad-worker" id="bad-ngo-worker">
+        <div className="bad-worker-art">
+          <Link href="/memes/30" className="bad-worker-card">
+            <span className="bad-worker-tape bad-worker-tape-right" aria-hidden="true" />
+            <svg className="bad-worker-stamp" viewBox="0 0 200 200" aria-hidden="true">
+              <defs>
+                <path id="stamp-ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" />
+              </defs>
+              <circle cx="100" cy="100" r="94" />
+              <circle cx="100" cy="100" r="52" />
+              <text>
+                <textPath href="#stamp-ring" startOffset="0" textLength="446" lengthAdjust="spacing">
+                  CERTIFIED ✦ BAD NGO WORKER ✦ CERTIFIED ✦
+                </textPath>
+              </text>
+              <text x="100" y="96" textAnchor="middle" className="bad-worker-stamp-big">100%</text>
+              <text x="100" y="118" textAnchor="middle" className="bad-worker-stamp-small">UNBOTHERED</text>
+            </svg>
+            <Image
+              src="/memes/30.png"
+              alt="A Bad NGO Worker: takes credit for their work, demands fair wage, questions the power, supports unionizing, refuses unpaid overtime"
+              width={1080}
+              height={1350}
+            />
           </Link>
         </div>
 
-        <div className="majdoor-fan">
-          <Link href="/memes/5" className="fan-card fan-card-1">
-            <Image src="/memes/5.png" alt="WokeOnPaper meme" width={500} height={625} />
-          </Link>
-          <Link href="/memes/20" className="fan-card fan-card-2">
-            <Image src="/memes/20.png" alt="WokeOnPaper meme" width={500} height={625} />
-          </Link>
-          <Link href="/memes/30" className="fan-card fan-card-3">
-            <Image src="/memes/30.png" alt="A Bad NGO Worker" width={500} height={625} />
-          </Link>
+        <div className="bad-worker-copy">
+          <p className="bad-worker-eyebrow">Congratulations.</p>
+
+          <h2>
+            You might be a{" "}
+            <span className="bad-worker-strike">
+              bad
+              <svg viewBox="0 0 120 40" aria-hidden="true" preserveAspectRatio="none">
+                <path d="M4 30 C 30 8, 80 4, 116 12" />
+              </svg>
+            </span>{" "}
+            NGO worker.
+          </h2>
+
+          <ul className="bad-worker-traits">
+            <li>You ask questions.</li>
+            <li>Want fair pay.</li>
+            <li>Have a life outside work.</li>
+            <li>Refuse unpaid overtime.</li>
+          </ul>
+
+          <p className="bad-worker-aside">Honestly, what is wrong with you?</p>
+
+          <div className="bad-worker-ctas">
+            <Link href="/memes/30" className="hero-cta">
+              See the full checklist →
+            </Link>
+            <Link href="/memes" className="bad-worker-textlink">
+              More memes
+            </Link>
+          </div>
         </div>
       </section>
 

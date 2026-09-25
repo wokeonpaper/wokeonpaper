@@ -1106,49 +1106,7 @@ img {
   }
 }
 
-/* =========================
-   MAJDOOR SECTION
-   ========================= */
 
-.majdoor-section {
-  padding: 9vw 5vw;
-  background: var(--purple);
-  color: var(--white);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6vw;
-  align-items: center;
-}
-
-.majdoor-copy h2 {
-  margin: 16px 0 0;
-  font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: clamp(38px, 4.4vw, 64px);
-  line-height: 1.02;
-  letter-spacing: -0.05em;
-}
-
-.majdoor-copy p {
-  margin: 24px 0 0;
-  max-width: 480px;
-  color: #dfd0e2;
-  font-size: 17px;
-  line-height: 1.55;
-}
-
-.majdoor-copy .text-link {
-  display: inline-block;
-  margin-top: 30px;
-  font-weight: 700;
-  color: var(--yellow);
-  border-bottom: 1px solid var(--yellow);
-  padding-bottom: 4px;
-  transition: opacity 0.2s ease;
-}
-
-.majdoor-copy .text-link:hover {
-  opacity: 0.7;
-}
 
 
 
@@ -1276,10 +1234,6 @@ img {
 
 @media (max-width: 1000px) {
   .featured-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .majdoor-section {
     grid-template-columns: 1fr;
   }
 
@@ -2993,69 +2947,241 @@ img {
 }
 
 /* =========================
-   MAJDOOR FANNED POLAROIDS
+   BAD NGO WORKER
+   Mirror of the hero: purple ground, art on the left, and a rubber
+   stamp instead of the burst.
    ========================= */
 
-.majdoor-fan {
+.bad-worker {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 5vw;
+  align-items: center;
+  padding: 110px 6vw 120px;
+  background: var(--purple);
+  color: var(--white);
+}
+
+.bad-worker-art {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 460px;
+  padding: 40px 0;
 }
 
-.fan-card {
-  position: absolute;
-  width: 240px;
-  aspect-ratio: 4 / 5;
-  background: var(--white);
-  padding: 12px 12px 12px;
-  border-radius: 6px;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.32);
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, z-index 0s;
-}
-
-.fan-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 3px;
-  display: block;
-}
-
-.fan-card-1 {
-  transform: rotate(-8deg) translateX(-95px);
+.bad-worker-card {
+  position: relative;
   z-index: 1;
+  width: min(78%, 420px);
+  padding: 10px;
+  background: var(--white);
+  box-shadow: 14px 14px 0 var(--purple-dark), 0 26px 40px rgba(20, 5, 30, 0.35);
+  transform: rotate(3deg);
+  transition: transform 0.4s ease;
 }
 
-.fan-card-2 {
-  transform: rotate(2deg) translateY(-14px);
-  z-index: 3;
+.bad-worker-card:hover {
+  transform: rotate(0deg) scale(1.02);
 }
 
-.fan-card-3 {
-  transform: rotate(9deg) translateX(95px);
+.bad-worker-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bad-worker-tape {
+  position: absolute;
   z-index: 2;
+  top: -12px;
+  width: 96px;
+  height: 28px;
+  background: rgba(240, 217, 247, 0.85);
 }
 
-.fan-card:hover {
-  transform: rotate(0deg) scale(1.05) translateY(-8px);
-  z-index: 5;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+.bad-worker-tape-right {
+  right: -26px;
+  transform: rotate(38deg);
+}
+
+.bad-worker-stamp {
+  position: absolute;
+  z-index: 2;
+  top: -52px;
+  left: -56px;
+  width: clamp(88px, 9vw, 118px);
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 3;
+  filter: drop-shadow(0 6px 10px rgba(20, 5, 30, 0.35));
+  animation: bad-worker-stamp-spin 28s linear infinite;
+}
+
+.bad-worker-stamp circle:first-of-type {
+  fill: #e0423a;
+  stroke-dasharray: 3 5;
+}
+
+.bad-worker-stamp text {
+  fill: var(--white);
+  stroke: none;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.bad-worker-stamp .bad-worker-stamp-big {
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+
+.bad-worker-stamp .bad-worker-stamp-small {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+@keyframes bad-worker-stamp-spin {
+  from { transform: rotate(-12deg); }
+  to { transform: rotate(348deg); }
+}
+
+.bad-worker-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+}
+
+.bad-worker-eyebrow {
+  display: inline-block;
+  margin: 0;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: clamp(22px, 2vw, 28px);
+  color: var(--yellow);
+  transform: rotate(-4deg);
+}
+
+.bad-worker-copy h2 {
+  margin: 14px 0 0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: clamp(42px, 5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.bad-worker-strike {
+  position: relative;
+  display: inline-block;
+  color: var(--yellow);
+}
+
+.bad-worker-strike svg {
+  position: absolute;
+  left: -6%;
+  bottom: -0.18em;
+  width: 112%;
+  height: 0.42em;
+  fill: none;
+  stroke: var(--yellow);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.bad-worker-traits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 38px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bad-worker-traits li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #f1e8f3;
+}
+
+.bad-worker-traits li::before {
+  content: "✓";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 800;
+  transform: translateY(-50%);
+}
+
+.bad-worker-aside {
+  margin: 30px 0 0;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: clamp(19px, 1.7vw, 23px);
+  color: var(--lilac);
+  transform: rotate(-1.5deg);
+}
+
+.bad-worker-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 34px;
+  margin-top: 34px;
+}
+
+.bad-worker-textlink {
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--yellow);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.bad-worker-textlink:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 1000px) {
-  .majdoor-fan {
-    min-height: 400px;
-    margin-top: 30px;
+  .bad-worker {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 80px 24px 90px;
+  }
+
+  .bad-worker-copy {
+    order: -1;
   }
 }
 
 @media (max-width: 600px) {
-  .fan-card { width: 180px; }
-  .fan-card-1 { transform: rotate(-7deg) translateX(-60px); }
-  .fan-card-3 { transform: rotate(8deg) translateX(60px); }
+  .bad-worker-traits {
+    grid-template-columns: 1fr;
+  }
+
+  .bad-worker-stamp {
+    top: -38px;
+    left: -34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bad-worker-stamp {
+    animation: none;
+  }
 }
 
 /* meme-page compact credit card */
@@ -4092,4 +4218,127 @@ img {
   .footer-logo {
     height: 88px;
   }
+}
+
+/* =========================
+   ABOUT: WHO WE ARE
+   Illustration with handwritten notes, in the hero's scribble style
+   ========================= */
+
+.who-we-are {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 32px 40px;
+}
+
+.who-stage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+
+.who-illustration {
+  position: absolute;
+  left: 15%;
+  top: 28.75%;
+  width: 70%;
+  height: auto;
+}
+
+.who-arrows {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.who-arrows marker path {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.who-notes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.who-note {
+  position: absolute;
+  margin: 0;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: clamp(14px, 1.45vw, 18px);
+  line-height: 1.35;
+  color: var(--purple);
+}
+
+.who-note-1 { transform: rotate(-4deg); }
+.who-note-2 { transform: rotate(3deg); }
+.who-note-3 { text-align: center; transform: rotate(-1.5deg); }
+.who-note-4 { text-align: right; transform: rotate(-3deg); }
+.who-note-5 { text-align: right; transform: rotate(4deg); }
+
+/* a yellow highlighter swipe under the first line of each note */
+.who-note::first-line {
+  background: linear-gradient(transparent 62%, rgba(255, 222, 90, 0.75) 62%);
+}
+
+@media (max-width: 820px) {
+  .who-we-are {
+    padding: 0 20px 60px;
+  }
+
+  .who-stage {
+    aspect-ratio: auto;
+  }
+
+  .who-arrows {
+    display: none;
+  }
+
+  .who-illustration {
+    position: static;
+    width: 100%;
+  }
+
+  .who-notes {
+    display: grid;
+    gap: 18px;
+    margin-top: 24px;
+    counter-reset: who;
+  }
+
+  .who-note {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    padding-left: 34px;
+    font-size: 17px;
+    text-align: left !important;
+    transform: none !important;
+    counter-increment: who;
+  }
+
+  .who-note::before {
+    content: counter(who);
+    position: absolute;
+    margin-left: -34px;
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--yellow);
+    font-size: 13px;
+  }
+
 }

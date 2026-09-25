@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import SiteHeader from "@/app/components/SiteHeader"
 import SiteFooter from "@/app/components/SiteFooter"
@@ -30,6 +31,36 @@ const lookingFor = [
   },
 ]
 
+// Notes around the "who we are" illustration. Positions are in the
+// 1200 x 800 stage used by the arrow SVG; each arrow ends on one person.
+const whoWeAre = [
+  {
+    text: "We work in the sector, so we know its contradictions up close.",
+    note: { left: 0, top: 70, width: 270 },
+    arrow: "M160 205 C 170 280, 230 325, 312 330",
+  },
+  {
+    text: "We stay anonymous by choice, but we don't hold back on the critique.",
+    note: { left: 30, top: 670, width: 300 },
+    arrow: "M250 662 C 300 600, 350 540, 400 505",
+  },
+  {
+    text: "No funders, no sponsors. Just stories, observations, and a point of view.",
+    note: { left: 420, top: 0, width: 360 },
+    arrow: "M560 112 C 540 160, 560 200, 580 234",
+  },
+  {
+    text: "We all have full-time jobs. This happens after office hours.",
+    note: { left: 870, top: 670, width: 300 },
+    arrow: "M950 662 C 900 600, 830 540, 778 505",
+  },
+  {
+    text: "We're part of the same sector we poke fun at. No one gets a free pass.",
+    note: { left: 930, top: 70, width: 270 },
+    arrow: "M1040 205 C 1030 280, 990 320, 928 332",
+  },
+]
+
 export default function AboutPage() {
   return (
     <main>
@@ -46,6 +77,45 @@ export default function AboutPage() {
           WokeOnPaper speaks to practitioners, inviting the sector to laugh at itself, listen
           better, and do better.
         </p>
+      </section>
+
+      <section className="who-we-are" aria-label="Who we are">
+        <div className="who-stage">
+          <svg className="who-arrows" viewBox="0 0 1200 800" aria-hidden="true">
+            <defs>
+              <marker id="who-arrowhead" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <path d="M1 1 L 10 6 L 1 11" />
+              </marker>
+            </defs>
+            {whoWeAre.map((item) => (
+              <path key={item.text} d={item.arrow} markerEnd="url(#who-arrowhead)" />
+            ))}
+          </svg>
+
+          <Image
+            src="/about/who-we-are.webp"
+            alt="Line drawing of five faceless people, the anonymous team behind WokeOnPaper"
+            width={1400}
+            height={640}
+            className="who-illustration"
+          />
+
+          <ol className="who-notes">
+            {whoWeAre.map((item, i) => (
+              <li
+                key={item.text}
+                className={`who-note who-note-${i + 1}`}
+                style={{
+                  left: `${(item.note.left / 1200) * 100}%`,
+                  top: `${(item.note.top / 800) * 100}%`,
+                  width: `${(item.note.width / 1200) * 100}%`,
+                }}
+              >
+                {item.text}
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
 
       <section className="contribute">
